@@ -1,0 +1,15 @@
+{
+  "name": "udm-server",
+  "version": "1.0.0",
+  "main": "target/index.js",
+  "author": "Paul D.R. Tuck",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.6.0",
+    "graphql": "^16.6.0"
+  }
+}
