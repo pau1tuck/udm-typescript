@@ -47,6 +47,10 @@ export class Track extends BaseEntity {
     @Column({ nullable: true })
     buyUrl?: string;
 
+    @Field()
+    @Column()
+    url!: string;
+
     @Field(() => Int)
     @Column({ type: "int", default: 0 })
     votes!: number;

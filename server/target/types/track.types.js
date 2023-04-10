@@ -49,6 +49,10 @@ __decorate([
     Field(),
     __metadata("design:type", String)
 ], TrackInput.prototype, "buyUrl", void 0);
+__decorate([
+    Field(),
+    __metadata("design:type", String)
+], TrackInput.prototype, "url", void 0);
 TrackInput = __decorate([
     InputType()
 ], TrackInput);

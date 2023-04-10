@@ -29,7 +29,7 @@ export class TrackResolver {
     }
 
     // CREATE TRACK
-    // @Authorized("ADMIN")
+    @Authorized("ADMIN")
     @Mutation(() => Track)
     async createTrack(@Arg("input") input: TrackInput): Promise<Track> {
         const newTrack = await Track.create({
@@ -45,12 +45,13 @@ export class TrackResolver {
     async updateTrack(
         @Arg("id") id: string,
         @Arg("trackId") trackId: number,
-        @Arg("buyUrl") buyUrl: string
+        @Arg("buyUrl") buyUrl: string,
+        @Arg("url") url: string
     ): Promise<Track | null> {
         const result = await getConnection()
             .createQueryBuilder()
             .update(Track)
-            .set({ trackId, buyUrl })
+            .set({ trackId, buyUrl, url })
             .where("id = :id", {
                 id,
             })

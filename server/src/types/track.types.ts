@@ -35,4 +35,7 @@ export class TrackInput {
 
     @Field()
     buyUrl?: string;
+
+    @Field()
+    url!: string;
 }

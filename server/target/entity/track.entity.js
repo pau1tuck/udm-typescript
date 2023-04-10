@@ -49,6 +49,11 @@ __decorate([
     __metadata("design:type", String)
 ], Track.prototype, "buyUrl", void 0);
 __decorate([
+    Field(),
+    Column(),
+    __metadata("design:type", String)
+], Track.prototype, "url", void 0);
+__decorate([
     Field(() => Int),
     Column({ type: "int", default: 0 }),
     __metadata("design:type", Number)

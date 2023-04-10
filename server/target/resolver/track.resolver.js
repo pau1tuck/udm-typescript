@@ -24,11 +24,11 @@ let TrackResolver = class TrackResolver {
         redisClient.lpush(TRACKS_CACHE_KEY, JSON.stringify(newTrack));
         return newTrack;
     }
-    async updateTrack(id, trackId, buyUrl) {
+    async updateTrack(id, trackId, buyUrl, url) {
         const result = await getConnection()
             .createQueryBuilder()
             .update(Track)
-            .set({ trackId, buyUrl })
+            .set({ trackId, buyUrl, url })
             .where("id = :id", {
             id,
         })
@@ -56,6 +56,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], TrackResolver.prototype, "track", null);
 __decorate([
+    Authorized("ADMIN"),
     Mutation(() => Track),
     __param(0, Arg("input")),
     __metadata("design:type", Function),
@@ -68,8 +69,9 @@ __decorate([
     __param(0, Arg("id")),
     __param(1, Arg("trackId")),
     __param(2, Arg("buyUrl")),
+    __param(3, Arg("url")),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Number, String]),
+    __metadata("design:paramtypes", [String, Number, String, String]),
     __metadata("design:returntype", Promise)
 ], TrackResolver.prototype, "updateTrack", null);
 __decorate([
