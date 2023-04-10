@@ -1,5 +1,5 @@
 import { AuthChecker } from "type-graphql";
-import { IContext } from "../types/context.interface";
+import { IContext } from "../types/context.interface.js";
 
 export const authChecker: AuthChecker<IContext> = ({ context }, roles) => {
     if (roles.length === 0) {
@@ -9,9 +9,7 @@ export const authChecker: AuthChecker<IContext> = ({ context }, roles) => {
     if (!context.req.session.userId) {
         return false;
     }
-    if (
-        context.req.session.roles?.some((role: string) => roles.includes(role))
-    ) {
+    if (context.req.session.roles?.some((role: string) => roles.includes(role))) {
         return true;
     }
     return false;

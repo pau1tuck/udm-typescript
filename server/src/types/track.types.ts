@@ -1,5 +1,5 @@
 import { Field, InputType, Int, ObjectType } from "type-graphql";
-import { Track } from "../entity/track.entity";
+import { Track } from "../entity/track.entity.js";
 
 @ObjectType()
 export class PaginatedTracks {

@@ -1,10 +1,12 @@
 {
     "compilerOptions": {
-        "rootDirs": [
-            "src"
-        ],
         "outDir": "target",
-        "baseUrl": ".",
+        "baseUrl": "./",
+        "paths": {
+            "*": [
+                "src/*"
+            ]
+        },
         "lib": [
             "es2020"
         ],
@@ -37,5 +39,11 @@
         "sourceMap": false,
         "strictFunctionTypes": true,
         "strictNullChecks": true,
-    }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }

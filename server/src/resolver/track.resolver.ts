@@ -1,10 +1,10 @@
 import { Arg, Authorized, Int, Mutation, Query, Resolver } from "type-graphql";
 import { getConnection } from "typeorm";
-import { Track } from "../entity/track.entity";
-import { PaginatedTracks, TrackInput } from "../types/track.types";
-import { redisClient } from "../config/redis";
+import { Track } from "../entity/track.entity.js";
+import { PaginatedTracks, TrackInput } from "../types/track.types.js";
+import { redisClient } from "../config/redis.js";
 
-const { TRACKS_CACHE_KEY } = process.env;
+const TRACKS_CACHE_KEY = process.env.TRACKS_CACHE_KEY || "key";
 
 @Resolver(Track)
 export class TrackResolver {

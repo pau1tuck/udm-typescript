@@ -4,10 +4,10 @@ import { Errback } from "express";
 import { createWriteStream } from "fs";
 import { Arg, Authorized, Ctx, Mutation, Query, Resolver } from "type-graphql";
 import { getConnection } from "typeorm";
-import { User } from "../entity/user.entity";
-import { RegisterUserInput } from "../types/user.types";
-import { IContext } from "../types/context.interface";
-import { IUpload } from "../types/upload.interface";
+import { User } from "../entity/user.entity.js";
+import { RegisterUserInput } from "../types/user.types.js";
+import { IContext } from "../types/context.interface.js";
+import { IUpload } from "../types/upload.interface.js";
 
 @Resolver(User)
 export class UserResolver {
