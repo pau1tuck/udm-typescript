@@ -8,6 +8,8 @@ import express, { Express, Request, Response } from "express";
 import session from "express-session";
 
 import { DataSource } from "typeorm";
+import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConnectionOptions";
+import ormconfig from "./config/ormconfig";
 
 const PROD = process.env.NODE_ENV === "production";
 const WORKERS = Number(process.env.WEB_CONCURRENCY) || 1;
@@ -16,7 +18,7 @@ const { DEBUG, HOST, PORT, CORS_ORIGIN, SESSION_COOKIE, DB_HOST, DB_PORT, REDIS_
 
 const server = async () => {
     // const orm: Connection = await createConnection(database);
-    // const orm = new DataSource(database);
+    const ormConfig = new DataSource(ormconfig);
 
     const app: Express = express();
 
