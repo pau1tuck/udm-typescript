@@ -17,7 +17,6 @@ const WORKERS = Number(process.env.WEB_CONCURRENCY) || 1;
 const { DEBUG, HOST, PORT, CORS_ORIGIN, SESSION_COOKIE, DB_HOST, DB_PORT, REDIS_HOST, REDIS_PORT } = process.env;
 
 const server = async () => {
-    // const orm: Connection = await createConnection(database);
     const ormConfig = new DataSource(ormconfig);
 
     const app: Express = express();
