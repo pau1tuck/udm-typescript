@@ -44,10 +44,6 @@ export class Track extends BaseEntity {
     year!: number;
 
     @Field()
-    @Column()
-    youtubeId!: string;
-
-    @Field()
     @Column({ nullable: true })
     buyUrl?: string;
 
