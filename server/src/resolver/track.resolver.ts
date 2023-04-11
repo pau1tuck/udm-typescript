@@ -45,13 +45,13 @@ export class TrackResolver {
     async updateTrack(
         @Arg("id") id: string,
         @Arg("trackId") trackId: number,
+        @Arg("youtubeId") youtubeId: string,
         @Arg("buyUrl") buyUrl: string,
-        @Arg("url") url: string
     ): Promise<Track | null> {
         const result = await getConnection()
             .createQueryBuilder()
             .update(Track)
-            .set({ trackId, buyUrl, url })
+            .set({ trackId, youtubeId, buyUrl })
             .where("id = :id", {
                 id,
             })

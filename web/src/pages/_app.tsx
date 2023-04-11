@@ -8,7 +8,7 @@ import type { AppProps } from "next/app";
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <div className="bg-custom min-h-screen">
-            <div className="max-w-screen-md mx-auto px-4 py-4">
+            <div className="max-w-screen-xl mx-auto px-4 py-4">
                 <header className="flex flex-col items-center justify-center mb-8">
                     <div>
                         <Logo />

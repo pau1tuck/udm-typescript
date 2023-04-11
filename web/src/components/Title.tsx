@@ -8,7 +8,7 @@ export default function Title() {
                 <Image
                     src="/images/udm-title.png"
                     alt="Underground Dance Music"
-                    width={300}
+                    width={350}
                     height={100}
                     className="mr-2"
                 />

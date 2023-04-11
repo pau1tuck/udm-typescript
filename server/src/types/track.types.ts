@@ -34,8 +34,8 @@ export class TrackInput {
     year!: number;
 
     @Field()
-    buyUrl?: string;
+    youtubeId!: string;
 
     @Field()
-    url!: string;
+    buyUrl?: string;
 }

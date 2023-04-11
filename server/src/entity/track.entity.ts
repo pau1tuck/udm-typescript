@@ -44,12 +44,12 @@ export class Track extends BaseEntity {
     year!: number;
 
     @Field()
-    @Column({ nullable: true })
-    buyUrl?: string;
+    @Column()
+    youtubeId!: string;
 
     @Field()
-    @Column()
-    url!: string;
+    @Column({ nullable: true })
+    buyUrl?: string;
 
     @Field(() => Int)
     @Column({ type: "int", default: 0 })

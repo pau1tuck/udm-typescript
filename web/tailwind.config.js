@@ -13,6 +13,9 @@ module.exports = {
                 display: ["Quicksand", "ui-sans-serif", "Georgia"],
                 body: ["Montserrat", "ui-sans-serif", "Georgia"],
             },
+            colors: {
+                darkGray: "rgba(18, 18, 18, 0.9)",
+            },
             keyframes: {
                 flashing: {
                     "0%": { opacity: "1" },
