@@ -10,6 +10,8 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@fontsource/montserrat": "^4.5.14",
+        "@fontsource/quicksand": "^4.5.12",
         "@types/node": "18.15.11",
         "@types/react": "18.0.34",
         "@types/react-dom": "18.0.11",

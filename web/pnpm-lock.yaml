@@ -1,6 +1,12 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@fontsource/montserrat':
+    specifier: ^4.5.14
+    version: 4.5.14
+  '@fontsource/quicksand':
+    specifier: ^4.5.12
+    version: 4.5.12
   '@types/node':
     specifier: 18.15.11
     version: 18.15.11
@@ -82,6 +88,14 @@ packages:
   /@eslint/js@8.38.0:
     resolution: {integrity: sha512-IoD2MfUnOV58ghIHCiil01PcohxjbYR/qCxsoC+xNgUwh1EY8jOOrYmu3d3a71+tJJ23uscEV4X2HJWMsPJu4g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@fontsource/montserrat@4.5.14:
+    resolution: {integrity: sha512-fTvrteVzuFUePhr4QYBGoK8G/YHLJ3IhF1HhKg0AxcFvZajJT7rM7ULdmKLSd2PkX44R3aaFZq1zDbmjbGGI+w==}
+    dev: false
+
+  /@fontsource/quicksand@4.5.12:
+    resolution: {integrity: sha512-aSgAR82dAzRsWGupPobU1ubfX6MhrQgKw2xe0AEKyQ5yMMpNhptTajbOIPJ8ZE5CPX3UHYlGY0da/7ztoEM3vQ==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.8:
