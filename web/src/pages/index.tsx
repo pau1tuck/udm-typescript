@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import TrackBox from "@/components/TrackBox/TrackBox";
+import TrackBox from "@/components/TrackGrid/TrackBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
