@@ -1,18 +1,18 @@
 // src/components/MyComponent.tsx
 import React from "react";
-import { useGlobalState } from "@/config/global-state";
+import { useGlobalState } from "@/config/global-state-context";
 
 const MyComponent: React.FC = () => {
-    const { isTrue, setIsTrue } = useGlobalState();
+    const { nowPlaying, setNowPlaying } = useGlobalState();
 
-    const toggleIsTrue = () => {
-        setIsTrue(!isTrue);
+    const toggleNowPlaying = () => {
+        setNowPlaying(!nowPlaying);
     };
 
     return (
         <div>
-            <p>isTrue: {isTrue ? "True" : "False"}</p>
-            <button onClick={toggleIsTrue}>Toggle isTrue</button>
+            <p>nowPlaying: {nowPlaying ? "True" : "False"}</p>
+            <button onClick={toggleNowPlaying}>Toggle isTrue</button>
         </div>
     );
 };
