@@ -2,13 +2,13 @@
 import { createContext, useContext, useState } from "react";
 
 interface GlobalStateContextProps {
-    isTrue: boolean;
-    setIsTrue: (value: boolean) => void;
+    nowPlaying: boolean;
+    setNowPlaying: (value: boolean) => void;
 }
 
 const GlobalStateContext = createContext<GlobalStateContextProps>({
-    isTrue: false,
-    setIsTrue: () => {},
+    nowPlaying: false,
+    setNowPlaying: () => {},
 });
 
 export const useGlobalState = () => {
@@ -18,10 +18,10 @@ export const useGlobalState = () => {
 export const GlobalStateProvider = ({
     children,
 }: React.PropsWithChildren<{}>) => {
-    const [isTrue, setIsTrue] = useState<boolean>(false);
+    const [nowPlaying, setNowPlaying] = useState<boolean>(false);
 
     return (
-        <GlobalStateContext.Provider value={{ isTrue, setIsTrue }}>
+        <GlobalStateContext.Provider value={{ nowPlaying, setNowPlaying }}>
             {children}
         </GlobalStateContext.Provider>
     );
