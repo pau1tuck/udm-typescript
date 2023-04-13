@@ -4,6 +4,9 @@ dependencies:
   '@apollo/client':
     specifier: ^3.7.12
     version: 3.7.12(graphql@16.6.0)(react-dom@18.2.0)(react@18.2.0)
+  '@fontsource/architects-daughter':
+    specifier: ^4.5.9
+    version: 4.5.9
   '@fontsource/montserrat':
     specifier: ^4.5.14
     version: 4.5.14
@@ -130,6 +133,10 @@ packages:
   /@eslint/js@8.38.0:
     resolution: {integrity: sha512-IoD2MfUnOV58ghIHCiil01PcohxjbYR/qCxsoC+xNgUwh1EY8jOOrYmu3d3a71+tJJ23uscEV4X2HJWMsPJu4g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@fontsource/architects-daughter@4.5.9:
+    resolution: {integrity: sha512-ImvKC1XaIy4dcdz89I9J1yONK88kQ+LH0Xwe2McdInuQJc97sleIYaOtSjw5MJcYfpgKxyyREMZxZ0RDaMqqMQ==}
     dev: false
 
   /@fontsource/montserrat@4.5.14:

@@ -12,6 +12,7 @@ module.exports = {
             fontFamily: {
                 display: ["Quicksand", "ui-sans-serif", "Georgia"],
                 body: ["Montserrat", "ui-sans-serif", "Georgia"],
+                cursive: ["Architects Daughter", "cursive", "ui-sans-serif"],
             },
             colors: {
                 darkGray: "rgba(18, 18, 18, 0.9)",

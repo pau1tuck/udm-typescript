@@ -1,5 +1,6 @@
 import "@fontsource/quicksand/400.css";
 import "@fontsource/montserrat/400.css";
+import "@fontsource/architects-daughter/400.css";
 import "@/styles/globals.css";
 import { GlobalStateProvider } from "@/config/global-state-context";
 import Logo from "@/components/Logo";
