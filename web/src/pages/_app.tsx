@@ -5,7 +5,7 @@ import "@/styles/globals.css";
 import { GlobalStateProvider } from "@/config/global-state-context";
 import Logo from "@/components/Logo";
 import Title from "@/components/Title";
-import Navbar from "../components/NavBar/NavBar";
+import Navbar from "@/components/NavBar/NavBar";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
