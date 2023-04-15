@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
     darkMode: true,
     content: [
@@ -15,6 +15,9 @@ module.exports = {
                 cursive: ["Architects Daughter", "cursive", "ui-sans-serif"],
             },
             colors: {
+                primary: "#FFA500", // orange
+                secondary: "#00FFFF", // cyan
+                tertiary: "#FF69B4", // pink
                 darkGray: "rgba(18, 18, 18, 0.9)",
             },
             keyframes: {
