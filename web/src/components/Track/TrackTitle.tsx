@@ -1,5 +1,6 @@
 import React from "react";
+import { ITrackData } from "@/types/Track.interface";
 
-export function TrackTitle(title: string): JSX.Element {
-    return <div className="font-cursive text-blue-400">{title}</div>;
+export function TrackTitle(track: ITrackData) {
+    return <div className="font-cursive text-blue-400">{track.title}</div>;
 }

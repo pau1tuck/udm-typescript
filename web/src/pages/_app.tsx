@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <div>
                     <Navbar />
                 </div>
-                <div className="max-w-screen-xl mx-auto mt-[-1rem] px-4">
+                <div className="max-w-screen-xl mx-auto mt-[-2rem] px-4">
                     <header className="flex flex-col items-center justify-center mb-8">
                         <div>
                             <Logo />

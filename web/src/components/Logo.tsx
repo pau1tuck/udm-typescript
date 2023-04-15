@@ -7,8 +7,8 @@ export default function Logo() {
             <Image
                 src="/images/udm-logo.png"
                 alt="UDM"
-                width={200}
-                height={200}
+                width={250}
+                height={250}
                 className="mr-2"
             />
         </div>
