@@ -1,5 +1,6 @@
 import "@fontsource/quicksand/400.css";
 import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/500.css";
 import "@fontsource/architects-daughter/400.css";
 import "@/styles/globals.css";
 import { GlobalStateProvider } from "@/config/global-state-context";
@@ -7,6 +8,8 @@ import Logo from "@/components/Logo";
 import Title from "@/components/Title";
 import Navbar from "@/components/NavBar/NavBar";
 import type { AppProps } from "next/app";
+import { DevSupport } from "@react-buddy/ide-toolbox-next";
+import { ComponentPreviews, useInitial } from "@/components/dev";
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -15,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 <div>
                     <Navbar />
                 </div>
-                <div className="max-w-screen-xl mx-auto px-4 py-4">
+                <div className="max-w-screen-xl mx-auto mt-[-1rem] px-4">
                     <header className="flex flex-col items-center justify-center mb-8">
                         <div>
                             <Logo />
@@ -24,7 +27,12 @@ export default function App({ Component, pageProps }: AppProps) {
                             <Title />
                         </div>
                     </header>
-                    <Component {...pageProps} />
+                    <DevSupport
+                        ComponentPreviews={ComponentPreviews}
+                        useInitialHook={useInitial}
+                    >
+                        <Component {...pageProps} />
+                    </DevSupport>
                 </div>
             </div>
         </GlobalStateProvider>
