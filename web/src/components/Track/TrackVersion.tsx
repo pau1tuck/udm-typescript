@@ -1,10 +1,6 @@
 import React from "react";
-import { ITrack } from "@/types/Track.interface";
+import { ITrackData } from "@/types/Track.interface";
 
-type VersionProps = {
-    version: string;
-};
-
-export function TrackVersion(version: ITrack) {
+export default function TrackVersion(version: ITrackData) {
     return <div className="font-cursive text-blue-400">{version.version}</div>;
 }
