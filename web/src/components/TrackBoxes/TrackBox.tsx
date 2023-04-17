@@ -1,9 +1,7 @@
-// TODAY: Track Image from YouTube
-
 import React from "react";
 import { ITrack } from "@/types/Track.interface";
-import TrackBoxData from "@/components/TrackGrid/TrackBoxData";
-import TrackBoxImage from "@/components/TrackGrid/TrackBoxImage";
+import TrackBoxImage from "@/components/TrackBoxes/TrackBoxImage";
+import TrackBoxData from "@/components/TrackBoxes/TrackBoxData";
 
 export default function TrackBox(props: { track: ITrack }) {
     const { track } = props;

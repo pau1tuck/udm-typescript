@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ITrackData } from "@/types/Track.interface";
-import getServerSideTrackImageProps from "@/components/Track/getServerSideTrackImageProps";
+import getServerSideProps from "@/utils/getServerSideProps";
 
 interface ITrackImageProps extends ITrackData {
     width: number;
@@ -14,7 +14,7 @@ export default function TrackImage({ trackId, width, height }: ITrackImageProps)
     useEffect(() => {
         async function fetchTrackImage() {
             try {
-                const { props } = await getServerSideTrackImageProps(trackId);
+                const { props } = await getServerSideProps(trackId);
                 setImageUrl(props.imageUrl);
             } catch (error) {
                 console.error(error);

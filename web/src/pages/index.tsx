@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import { data } from "@/dummyData";
 import { ITrack } from "@/types/Track.interface";
-import TrackBox from "@/components/TrackGrid/TrackBox";
+import TrackBox from "@/components/TrackBoxes/TrackBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
