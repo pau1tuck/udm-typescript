@@ -15,10 +15,10 @@ module.exports = {
                 cursive: ["Architects Daughter", "cursive", "ui-sans-serif"],
             },
             colors: {
-                primary: "#FFA500", // orange
-                secondary: "#00FFFF", // cyan
-                tertiary: "#FF69B4", // pink
-                darkGray: "rgba(18, 18, 18, 0.9)",
+                primary: "#FD024B", // pink
+                secondary: "#0C86F8", // cyan
+                tertiary: "#fff056", // yellow
+                darkGray: "rgba(10, 10, 10, 0.9)",
             },
             keyframes: {
                 flashing: {
