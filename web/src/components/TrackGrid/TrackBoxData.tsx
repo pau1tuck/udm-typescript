@@ -1,17 +1,22 @@
 import React from "react";
-import TrackTitle from "@/components/Track/TrackTitle";
-import TrackVersion from "@/components/Track/TrackVersion";
 import { ITrackData } from "@/types/Track.interface";
 
-export default function TrackBoxData(track: ITrackData, key: number) {
+export default function TrackBoxData(props: { track: ITrackData }) {
+    const { track } = props;
     return (
-        <div>
+        <div>{/*
             <div className="w-60 h-32 mt-2 bg-black rounded-md">
                 <TrackTitle title={track.title} />
             </div>
-            <div className="w-60 h-32 mt-2 bg-black rounded-md">
+            {track.version ? (<div className="w-60 h-32 mt-2 bg-black rounded-md">
                 <TrackVersion version={track.version} />
+            </div>) : null}
+            <div className="w-60 h-32 mt-2 bg-black rounded-md">
+                <TrackArtist title={track.artist} />
             </div>
+            <div className="w-60 h-32 mt-2 bg-black rounded-md">
+                <TrackLabel title={track.label} />
+            </div>*/}
         </div>
     );
 }

@@ -6,15 +6,16 @@ import TrackBox from "@/components/TrackGrid/TrackBox";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+    let trackBox = null;
     if (data) {
-        const trackBox = data.map((track: ITrack, key: number) => (
+        trackBox = data.map((track: ITrack, key: number) => (
             <TrackBox track={track} key={key} />
         ));
     }
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between">
-            <div className="flex flex-wrap justify-center"></div>
+            <div className="flex flex-wrap justify-center">{trackBox}</div>
         </main>
     );
 }
