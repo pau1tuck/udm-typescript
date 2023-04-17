@@ -1,4 +1,4 @@
-export async function getServerSideTrackImageProps(trackId: string | undefined) {
+export default async function getServerSideTrackImageProps(trackId: string | undefined) {
     const YOUTUBE_API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 
     try {
