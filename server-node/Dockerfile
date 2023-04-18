@@ -2,7 +2,7 @@
 FROM node:14-alpine
 
 # Set the working directory to /app
-WORKDIR /app/server
+WORKDIR /app/udm-server-node
 
 # Install curl and pnpm
 RUN apk add --no-cache curl \
@@ -25,7 +25,7 @@ RUN apk update && apk add postgresql
 COPY pg_hba.conf /etc/postgresql/pg_hba.conf
 
 # Copy the database backup file to the container
-COPY mydatabase.backup /tmp/mydatabase.backup
+COPY udm-db-node.backup /tmp/udm-db-node.backup
 
 # Restore the database
 RUN pg_restore -U postgres -d mydatabase /tmp/mydatabase.backup
