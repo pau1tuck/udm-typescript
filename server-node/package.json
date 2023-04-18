@@ -7,7 +7,7 @@
     "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
-        "dev": "parallelshell 'tsc -w' 'nodemon target/index.js'"
+        "run": "parallelshell 'tsc -w' 'nodemon target/index.js'"
     },
     "dependencies": {
         "@types/graphql-upload": "^16.0.0",
