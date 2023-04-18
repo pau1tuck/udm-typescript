@@ -1,6 +1,6 @@
 import React from "react";
 import { ITrackData } from "@/types/Track.interface";
-import TrackImage from "@/components/Track/TrackImage";
+import TrackImage from "@/components/TrackData/TrackImage";
 
 export default function TrackBoxImage({ trackId }: ITrackData) {
     return (

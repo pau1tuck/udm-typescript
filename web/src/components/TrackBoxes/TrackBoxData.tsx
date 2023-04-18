@@ -1,9 +1,9 @@
 import React from "react";
 import { ITrackData } from "@/types/Track.interface";
-import TrackTitle from "@/components/Track/TrackTitle";
-import TrackVersion from "@/components/Track/TrackVersion";
-import TrackArtist from "@/components/Track/TrackArtist";
-import TrackLabel from "@/components/Track/TrackLabel";
+import TrackTitle from "@/components/TrackData/TrackTitle";
+import TrackVersion from "@/components/TrackData/TrackVersion";
+import TrackArtist from "@/components/TrackData/TrackArtist";
+import TrackLabel from "@/components/TrackData/TrackLabel";
 
 export default function TrackBoxData(props: { track: ITrackData }) {
     const { track } = props;
