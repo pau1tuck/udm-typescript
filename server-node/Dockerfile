@@ -24,6 +24,12 @@ RUN apk update && apk add postgresql
 # Copy the PostgreSQL configuration file to the container
 COPY pg_hba.conf /etc/postgresql/pg_hba.conf
 
+# Copy the database backup file to the container
+COPY mydatabase.backup /tmp/mydatabase.backup
+
+# Restore the database
+RUN pg_restore -U postgres -d mydatabase /tmp/mydatabase.backup
+
 # Expose the ports that the application and database will run on
 EXPOSE 5000 5432
 
