@@ -5,7 +5,7 @@ import TrackBoxImage from "@/components/TrackBoxes/TrackBoxImage";
 import TrackBoxData from "@/components/TrackBoxes/TrackBoxData";
 
 // Column widths:
-const cw = {
+export const columnWidth = {
     number: "20px",
     image: "56px",
     track: "1fr",
@@ -20,19 +20,20 @@ export default function TrackRow() {
             <div
                 className="grid h-56 gap-0"
                 style={{
-                    gridTemplateColumns: `${cw.number} ${cw.image} ${cw.track} ${cw.label} ${cw.controls} ${cw.duration}`,
+                    gridTemplateColumns: `${columnWidth.number} ${columnWidth.image} ${columnWidth.track} ${columnWidth.label} ${columnWidth.controls} ${columnWidth.duration}`,
                 }}
             >
                 <div className="bg-gray-200">#</div>
                 <div className="bg-gray-300"> </div>
                 <div className="bg-gray-400">Title, Artist</div>
-                <div className="bg-gray-500">Label</div>
+                <div className="bg-gray-500 md:hidden">Label</div>
+                <div className="bg-gray-600"> </div>
                 <div className="bg-gray-600">T</div>
             </div>
             <div
                 className="grid h-56 gap-0"
                 style={{
-                    gridTemplateColumns: `${cw.number} ${cw.image} ${cw.track} ${cw.label} ${cw.controls} ${cw.duration}`,
+                    gridTemplateColumns: `${columnWidth.number} ${columnWidth.image} ${columnWidth.track} ${columnWidth.label} ${columnWidth.controls} ${columnWidth.duration}`,
                 }}
             >
                 <div className="bg-gray-200">1</div>
@@ -43,7 +44,7 @@ export default function TrackRow() {
                     />
                 </div>
                 <div className="bg-gray-400">Song Title, Artist Name</div>
-                <div className="bg-gray-500">Record Label</div>
+                <div className="bg-gray-500 md:hidden">Record Label</div>
                 <div className="bg-gray-600">Track Length</div>
             </div>
         </div>
