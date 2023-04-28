@@ -14,39 +14,66 @@ export const columnWidth = {
     duration: "20px",
 };
 
-export default function TrackRow() {
+const TrackRow: React.FC = () => {
+    const gridColumns = {
+        gridColumn1: "20px",
+        gridColumn2: "56px",
+        gridColumn3: "1fr",
+        gridColumn4: "200px",
+        gridColumn5: "70px",
+        gridColumn6: "210px",
+    };
+
+    const rowHeight = "56px";
+
     return (
-        <div className="max-w-1280 mx-auto">
-            <div
-                className="grid h-56 gap-0"
-                style={{
-                    gridTemplateColumns: `${columnWidth.number} ${columnWidth.image} ${columnWidth.track} ${columnWidth.label} ${columnWidth.controls} ${columnWidth.duration}`,
-                }}
-            >
-                <div className="bg-gray-200">#</div>
-                <div className="bg-gray-300"> </div>
-                <div className="bg-gray-400">Title, Artist</div>
-                <div className="bg-gray-500 md:hidden">Label</div>
-                <div className="bg-gray-600"> </div>
-                <div className="bg-gray-600">T</div>
-            </div>
-            <div
-                className="grid h-56 gap-0"
-                style={{
-                    gridTemplateColumns: `${columnWidth.number} ${columnWidth.image} ${columnWidth.track} ${columnWidth.label} ${columnWidth.controls} ${columnWidth.duration}`,
-                }}
-            >
-                <div className="bg-gray-200">1</div>
-                <div className="bg-gray-300">
-                    <Image
-                        src="https://via.placeholder.com/56"
-                        alt="Album Cover"
-                    />
+        <div className="w-full">
+            <div className="max-w-1280 mx-auto w-full">
+                <div
+                    className="grid gap-0 w-full"
+                    style={{ gridTemplateRows: "auto auto" }}
+                >
+                    <div
+                        className="grid gap-0 w-full"
+                        style={{
+                            gridTemplateColumns: `${gridColumns.gridColumn1} ${gridColumns.gridColumn2} ${gridColumns.gridColumn3} ${gridColumns.gridColumn4} ${gridColumns.gridColumn5} ${gridColumns.gridColumn6}`,
+                            height: rowHeight,
+                        }}
+                    >
+                        <div className="bg-gray-200">#</div>
+                        <div className="bg-gray-300"> </div>
+                        <div className="bg-gray-400">Title, Artist</div>
+                        <div className="bg-gray-500">Label</div>
+                        <div className="bg-gray-600">T</div>
+                        <div className="bg-gray-600">T</div>
+                    </div>
+                    <div
+                        className="grid gap-0 w-full"
+                        style={{
+                            gridTemplateColumns: `${gridColumns.gridColumn1} ${gridColumns.gridColumn2} ${gridColumns.gridColumn3} ${gridColumns.gridColumn4} ${gridColumns.gridColumn5} ${gridColumns.gridColumn6}`,
+                            height: rowHeight,
+                        }}
+                    >
+                        <div className="bg-gray-200">1</div>
+                        <div className="bg-gray-300">
+                            <Image
+                                src="https://via.placeholder.com/56"
+                                alt="Album Cover"
+                                width={56}
+                                height={56}
+                            />
+                        </div>
+                        <div className="bg-gray-400">
+                            Song Title, Artist Name
+                        </div>
+                        <div className="bg-gray-500">Record Label</div>
+                        <div className="bg-gray-600">Track Length</div>
+                        <div className="bg-gray-600">Track Length</div>
+                    </div>
                 </div>
-                <div className="bg-gray-400">Song Title, Artist Name</div>
-                <div className="bg-gray-500 md:hidden">Record Label</div>
-                <div className="bg-gray-600">Track Length</div>
             </div>
         </div>
     );
-}
+};
+
+export default TrackRow;
