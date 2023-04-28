@@ -10,8 +10,8 @@ export const columnWidth = {
     image: "56px",
     track: "1fr",
     label: "200px",
-    controls: "200px",
     duration: "20px",
+    controls: "200px",
 };
 
 const TrackRow: React.FC = () => {
@@ -40,12 +40,20 @@ const TrackRow: React.FC = () => {
                             height: rowHeight,
                         }}
                     >
-                        <div className="bg-gray-200">#</div>
-                        <div className="bg-gray-300"> </div>
-                        <div className="bg-gray-400">Title, Artist</div>
-                        <div className="bg-gray-500">Label</div>
-                        <div className="bg-gray-600">T</div>
-                        <div className="bg-gray-600">T</div>
+                        <div className="flex items-center justify-center bg-gray-200">
+                            #
+                        </div>
+                        <div className="flex items-center bg-gray-300"> </div>
+                        <div className="flex items-center pl-2 bg-gray-400">
+                            Title, Artist
+                        </div>
+                        <div className="flex items-center pl-2 bg-gray-500">
+                            Label
+                        </div>
+                        <div className="flex items-center justify-center bg-gray-600">
+                            T
+                        </div>
+                        <div className="flex items-center bg-gray-700"></div>
                     </div>
                     <div
                         className="grid gap-0 w-full"
@@ -54,7 +62,7 @@ const TrackRow: React.FC = () => {
                             height: rowHeight,
                         }}
                     >
-                        <div className="bg-gray-200">1</div>
+                        <div className="flex items-center bg-gray-200">1</div>
                         <div className="bg-gray-300">
                             <Image
                                 src="https://via.placeholder.com/56"
@@ -63,12 +71,18 @@ const TrackRow: React.FC = () => {
                                 height={56}
                             />
                         </div>
-                        <div className="bg-gray-400">
+                        <div className="flex items-center pl-2 bg-gray-400">
                             Song Title, Artist Name
                         </div>
-                        <div className="bg-gray-500">Record Label</div>
-                        <div className="bg-gray-600">Track Length</div>
-                        <div className="bg-gray-600">Track Length</div>
+                        <div className="flex items-center pl-2 bg-gray-500">
+                            Record Label
+                        </div>
+                        <div className="flex items-center justify-center bg-gray-600">
+                            04:31
+                        </div>
+                        <div className="flex items-center justify-end pr-2 bg-gray-600">
+                            Controls
+                        </div>
                     </div>
                 </div>
             </div>
