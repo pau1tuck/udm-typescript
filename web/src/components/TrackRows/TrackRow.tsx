@@ -62,7 +62,9 @@ const TrackRow: React.FC = () => {
                             height: rowHeight,
                         }}
                     >
-                        <div className="flex items-center bg-gray-200">1</div>
+                        <div className="flex items-center justify-center bg-gray-200">
+                            1
+                        </div>
                         <div className="bg-gray-300">
                             <Image
                                 src="https://via.placeholder.com/56"
