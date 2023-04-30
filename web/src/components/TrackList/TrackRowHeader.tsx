@@ -1,4 +1,5 @@
 import React from "react";
+import { MdNumbers } from "react-icons/md";
 import { BiTime } from "react-icons/bi";
 
 const listColumns = {
@@ -30,11 +31,11 @@ export default function TrackRowHeader({
                     style={{ gridTemplateRows: "auto auto" }}
                 >
                     <div
-                        className="grid gap-0 w-full grid-cols-[30px,5px,225px,5px,150px,5px] sm:grid-cols-[50px,5px,minmax(300px,1fr),5px,175px,5px] md:grid-cols-[50px,128px,minmax(300px,1fr),5px,200px,75px] lg:grid-cols-[50px,128px,1fr,200px,210px,75px] whitespace-nowrap"
+                        className="grid gap-0 w-full grid-cols-[30px,5px,225px,5px,150px,5px] sm:grid-cols-[50px,5px,minmax(300px,1fr),5px,175px,5px] md:grid-cols-[50px,128px,minmax(300px,1fr),5px,200px,75px] lg:grid-cols-[50px,128px,1fr,225px,210px,75px] whitespace-nowrap"
                         style={listStyles}
                     >
-                        <div className="flex items-center justify-center">
-                            #
+                        <div className="flex items-center justify-center md:mr-3 md:ml-3 text-xl">
+                            <MdNumbers />
                         </div>
                         <div className="flex items-center"></div>
                         <div className="flex items-center pl-2 sm:pl-2 md:pl-6 ">
