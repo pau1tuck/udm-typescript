@@ -12,7 +12,7 @@ export const useViewMode = () => {
     return useContext(ViewModeContext);
 };
 
-export const useViewModeUpdate = () => {
+export const useViewModeContext = () => {
     return useContext(ViewModeUpdateContext);
 };
 
