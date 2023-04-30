@@ -7,17 +7,20 @@ import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
 import TrackLabel from "@/components/TrackData/TrackLabel";
 
-export default function TrackRowData(props: { track: ITrackData }) {
-    const { track } = props;
+export default function TrackRowData(props: {
+    track: ITrackData;
+    index: number;
+}) {
+    const { track, index } = props;
     return (
         <div
             className="grid gap-0 w-full bg-darkGray text-gray-500"
             style={{ gridTemplateRows: "auto auto" }}
         >
             <div className="grid gap-0 w-full " style={listStyles}>
-                <div className="flex items-center justify-center">1</div>
+                <div className="flex items-center justify-center">{index}</div>
                 <div
-                    className="flex items-center"
+                    className="hidden lg:inline-flex items-center"
                     style={{
                         position: "relative",
                         width: "128px",
@@ -31,10 +34,15 @@ export default function TrackRowData(props: { track: ITrackData }) {
                         height={72}
                     />
                 </div>
-                <div className="flex items-center pl-6">
-                    Song Title, Artist Name
+                <div className="flex flex-col items-start justify-center pl-6 truncate">
+                    <div className="text-white">
+                        <TrackTitle title={track.title} />
+                    </div>
+                    <div className="text-primary">{track.artist}</div>
                 </div>
-                <div className="flex items-center pl-2 ">Record Label</div>
+                <div className="hidden lg:inline-flex items-center pl-2 text-secondary">
+                    <TrackLabel label={track.label} />
+                </div>
                 <div className="flex items-center justify-center ">
                     Controls
                 </div>

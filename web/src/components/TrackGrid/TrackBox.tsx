@@ -3,8 +3,8 @@ import { ITrack } from "@/types/Track.interface";
 import TrackBoxImage from "@/components/TrackGrid/TrackBoxImage";
 import TrackBoxData from "@/components/TrackGrid/TrackBoxData";
 
-export default function TrackBox(props: { track: ITrack }) {
-    const { track } = props;
+export default function TrackBox(props: { track: ITrack; index: number }) {
+    const { track, index } = props;
     const trackId = track.trackId;
     return (
         <div>

@@ -20,20 +20,20 @@ export default function Home() {
     if (data) {
         trackData = data.map((track: ITrack, key: number) => (
             <>
-                {viewMode == ViewMode.grid ? (
-                    <TrackBox track={track} key={key} />
-                ) : null}
+                {viewMode != ViewMode.grid ? (
+                    <TrackBox track={track} index={key + 1} key={key} />
+                ) : (
+                    <TrackRowData track={track} index={key + 1} key={key} />
+                )}
             </>
         ));
     }
 
     return (
-        <main className="flex min-h-screen flex-col justify-between">
+        <main className="flex min-h-screen flex-col">
             <ViewModeButton />
-            <TrackRowHeader>
-                <TrackRowData />
-            </TrackRowHeader>
-            <div className="flex flex-wrap justify-center">{trackData}</div>
+            <TrackRowHeader />
+            {/*<div className="flex flex-wrap justify-center">{trackData}</div>*/}
         </main>
     );
 }
