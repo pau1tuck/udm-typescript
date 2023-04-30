@@ -3,7 +3,8 @@ import { data } from "@/dummyData";
 import { ITrack } from "@/types/Track.interface";
 import ViewModeButton from "@/components/ViewModeButton";
 import TrackBox from "@/components/TrackGrid/TrackBox";
-import TrackRow from "@/components/TrackList/TrackRow";
+import TrackRowHeader from "@/components/TrackList/TrackRowHeader";
+import TrackRowData from "@/components/TrackList/TrackRowData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,9 @@ export default function Home() {
     return (
         <main className="flex min-h-screen flex-col justify-between">
             <ViewModeButton />
-            <TrackRow />
+            <TrackRowHeader>
+                <TrackRowData />
+            </TrackRowHeader>
             <div className="flex flex-wrap justify-center">{trackData}</div>
         </main>
     );

@@ -1,13 +1,14 @@
 import React from "react";
+import { BiTime } from "react-icons/bi";
 
 const listColumns = {
     gridColumn1: "50px",
     gridColumn2: "56px",
     gridColumn3: "1fr",
     gridColumn4: "200px",
-    gridColumn5: "70px",
-    gridColumn6: "210px",
-    rowHeight: "56px",
+    gridColumn5: "210px",
+    gridColumn6: "70px",
+    rowHeight: "70px",
 };
 
 export const listStyles = {
@@ -15,7 +16,9 @@ export const listStyles = {
     height: `${listColumns.rowHeight}`,
 };
 
-export default function TrackRowHeader() {
+export default function TrackRowHeader({
+    children,
+}: React.PropsWithChildren<{}>) {
     return (
         <div className="w-full">
             <div className="max-w-1280 mx-auto w-full">
@@ -32,9 +35,12 @@ export default function TrackRowHeader() {
                             Title, Artist
                         </div>
                         <div className="flex items-center pl-2">Label</div>
-                        <div className="flex items-center">T</div>
                         <div className="flex items-center"></div>
+                        <div className="flex items-center justify-center text-xl">
+                            <BiTime />
+                        </div>
                     </div>
+                    {children}
                 </div>
             </div>
         </div>
