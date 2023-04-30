@@ -8,15 +8,15 @@ interface ViewModeProviderProps {
 const ViewModeContext = createContext(ViewMode.GRID);
 const ViewModeUpdateContext = createContext<() => void>(() => {});
 
-export function useViewMode() {
+export const useViewMode = () => {
     return useContext(ViewModeContext);
-}
+};
 
-export function useViewModeUpdate() {
+export const useViewModeUpdate = () => {
     return useContext(ViewModeUpdateContext);
-}
+};
 
-export function ViewModeProvider({ children }: ViewModeProviderProps) {
+export default function ViewModeProvider({ children }: ViewModeProviderProps) {
     const [viewMode, setViewMode] = useState(ViewMode.GRID);
     const toggleViewMode = () => {
         setViewMode((prevViewMode) =>
