@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ITrackData } from "@/types/Track.interface";
-import { gridColumns } from "./TrackRow";
+import { listColumns } from "./TrackRow";
 import TrackTitle from "@/components/TrackData/TrackTitle";
 import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
@@ -10,13 +10,7 @@ import TrackLabel from "@/components/TrackData/TrackLabel";
 export default function TrackRowData(props: { track: ITrackData }) {
     const { track } = props;
     return (
-        <div
-            className="grid gap-0 w-full"
-            style={{
-                gridTemplateColumns: `${gridColumns.gridColumn1} ${gridColumns.gridColumn2} ${gridColumns.gridColumn3} ${gridColumns.gridColumn4} ${gridColumns.gridColumn5} ${gridColumns.gridColumn6}`,
-                height: gridColumns.rowHeight,
-            }}
-        >
+        <>
             <div className="flex items-center justify-center bg-gray-200">
                 1
             </div>
@@ -40,6 +34,6 @@ export default function TrackRowData(props: { track: ITrackData }) {
             <div className="flex items-center justify-end pr-2 bg-gray-600">
                 Controls
             </div>
-        </div>
+        </>
     );
 }

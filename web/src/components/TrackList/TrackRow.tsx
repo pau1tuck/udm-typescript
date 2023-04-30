@@ -1,20 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import { ITrack } from "@/types/Track.interface";
 import TrackBoxImage from "@/components/TrackGrid/TrackBoxImage";
 import TrackBoxData from "@/components/TrackGrid/TrackBoxData";
 
-// Column widths:
-export const columnWidth = {
-    number: "20px",
-    image: "56px",
-    track: "1fr",
-    label: "200px",
-    duration: "20px",
-    controls: "200px",
-};
-
-export const gridColumns = {
+const listColumns = {
     gridColumn1: "20px",
     gridColumn2: "56px",
     gridColumn3: "1fr",
@@ -22,6 +11,11 @@ export const gridColumns = {
     gridColumn5: "70px",
     gridColumn6: "210px",
     rowHeight: "56px",
+};
+
+const listStyles = {
+    gridTemplateColumns: `${listColumns.gridColumn1} ${listColumns.gridColumn2} ${listColumns.gridColumn3} ${listColumns.gridColumn4} ${listColumns.gridColumn5} ${listColumns.gridColumn6}`,
+    height: `${listColumns.rowHeight}`,
 };
 
 export default function TrackRow() {
@@ -32,13 +26,7 @@ export default function TrackRow() {
                     className="grid gap-0 w-full"
                     style={{ gridTemplateRows: "auto auto" }}
                 >
-                    <div
-                        className="grid gap-0 w-full"
-                        style={{
-                            gridTemplateColumns: `${gridColumns.gridColumn1} ${gridColumns.gridColumn2} ${gridColumns.gridColumn3} ${gridColumns.gridColumn4} ${gridColumns.gridColumn5} ${gridColumns.gridColumn6}`,
-                            height: gridColumns.rowHeight,
-                        }}
-                    >
+                    <div className="grid gap-0 w-full" style={listStyles}>
                         <div className="flex items-center justify-center bg-gray-200">
                             #
                         </div>
@@ -55,6 +43,7 @@ export default function TrackRow() {
                         <div className="flex items-center bg-gray-700"></div>
                     </div>
                 </div>
+                <div className="grid gap-0 w-full" style={listStyles}></div>
             </div>
         </div>
     );
