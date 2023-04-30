@@ -9,7 +9,10 @@ import TrackLabel from "@/components/TrackData/TrackLabel";
 export default function TrackRowData(props: { track: ITrackData }) {
     const { track } = props;
     return (
-        <>
+        <div
+            className="grid gap-0 w-full bg-darkGray text-gray-500"
+            style={{ gridTemplateRows: "auto auto" }}
+        >
             <div className="flex items-center justify-center bg-gray-200">
                 1
             </div>
@@ -33,6 +36,6 @@ export default function TrackRowData(props: { track: ITrackData }) {
             <div className="flex items-center justify-end pr-2 bg-gray-600">
                 Controls
             </div>
-        </>
+        </div>
     );
 }

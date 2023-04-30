@@ -7,7 +7,6 @@ import type { AppProps } from "next/app";
 import { DevSupport } from "@react-buddy/ide-toolbox-next";
 import { GlobalStateProvider } from "@/config/global-state-context";
 import ViewModeProvider from "@/utils/ViewModeContext";
-import { ViewMode } from "@/types/ViewMode.enum";
 import Logo from "@/components/Logo";
 import Title from "@/components/Title";
 import Navbar from "@/components/NavBar/NavBar";

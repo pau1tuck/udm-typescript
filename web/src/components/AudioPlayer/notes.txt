@@ -1,0 +1,3 @@
+React global store:
+
+https://medium.com/swlh/react-global-state-with-hooks-f163e49f90f9
