@@ -14,7 +14,9 @@ export default function TrackBoxData(props: { track: ITrackData }) {
             </div>
             {track.version && (
                 <div className="mt-2 rounded-md text-tertiary">
-                    (<TrackVersion version={track.version} />)
+                    {"("}
+                    <TrackVersion version={track.version} />
+                    {")"}
                 </div>
             )}
             <div className="mt-2 rounded-md text-primary">

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ITrack } from "@/types/Track.interface";
-import TrackBoxImage from "@/components/TrackBoxes/TrackBoxImage";
+import TrackBoxImage from "@/components/TrackGrid/TrackBoxImage";
 import TrackBoxData from "@/components/TrackBoxes/TrackBoxData";
 
 // Column widths:
