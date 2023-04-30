@@ -1,5 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import { ITrackData } from "@/types/Track.interface";
+import { gridColumns } from "./TrackRow";
 import TrackTitle from "@/components/TrackData/TrackTitle";
 import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
@@ -8,20 +10,35 @@ import TrackLabel from "@/components/TrackData/TrackLabel";
 export default function TrackRowData(props: { track: ITrackData }) {
     const { track } = props;
     return (
-        <div className="mt-3 font-cursive text-center text-white">
-            <div className="mt-2 rounded-md ">
-                <TrackTitle title={track.title} />
+        <div
+            className="grid gap-0 w-full"
+            style={{
+                gridTemplateColumns: `${gridColumns.gridColumn1} ${gridColumns.gridColumn2} ${gridColumns.gridColumn3} ${gridColumns.gridColumn4} ${gridColumns.gridColumn5} ${gridColumns.gridColumn6}`,
+                height: gridColumns.rowHeight,
+            }}
+        >
+            <div className="flex items-center justify-center bg-gray-200">
+                1
             </div>
-            {track.version && (
-                <div className="mt-2 rounded-md text-tertiary">
-                    (<TrackVersion version={track.version} />)
-                </div>
-            )}
-            <div className="mt-2 rounded-md text-primary">
-                <TrackArtist artist={track.artist} />
+            <div className="bg-gray-300">
+                <Image
+                    src="https://via.placeholder.com/56"
+                    alt="Album Cover"
+                    width={56}
+                    height={56}
+                />
             </div>
-            <div className="mt-2 rounded-md text-secondary">
-                [<TrackLabel label={track.label} />]
+            <div className="flex items-center pl-2 bg-gray-400">
+                Song Title, Artist Name
+            </div>
+            <div className="flex items-center pl-2 bg-gray-500">
+                Record Label
+            </div>
+            <div className="flex items-center justify-center bg-gray-600">
+                04:31
+            </div>
+            <div className="flex items-center justify-end pr-2 bg-gray-600">
+                Controls
             </div>
         </div>
     );
