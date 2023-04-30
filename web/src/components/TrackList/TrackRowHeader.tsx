@@ -3,12 +3,12 @@ import { BiTime } from "react-icons/bi";
 
 const listColumns = {
     gridColumn1: "50px",
-    gridColumn2: "56px",
+    gridColumn2: "128px",
     gridColumn3: "1fr",
     gridColumn4: "200px",
     gridColumn5: "210px",
     gridColumn6: "70px",
-    rowHeight: "70px",
+    rowHeight: "72px",
 };
 
 export const listStyles = {
@@ -31,7 +31,7 @@ export default function TrackRowHeader({
                             #
                         </div>
                         <div className="flex items-center"> </div>
-                        <div className="flex items-center pl-2">
+                        <div className="flex items-center pl-6">
                             Title, Artist
                         </div>
                         <div className="flex items-center pl-2">Label</div>

@@ -15,27 +15,30 @@ export default function TrackRowData(props: { track: ITrackData }) {
             style={{ gridTemplateRows: "auto auto" }}
         >
             <div className="grid gap-0 w-full " style={listStyles}>
-                <div className="flex items-center justify-center bg-gray-200">
-                    1
-                </div>
-                <div className="bg-gray-300">
+                <div className="flex items-center justify-center">1</div>
+                <div
+                    className="flex items-center"
+                    style={{
+                        position: "relative",
+                        width: "128px",
+                        height: "72px",
+                    }}
+                >
                     <Image
-                        src="https://via.placeholder.com/56"
+                        src="https://via.placeholder.com/128x72.png"
                         alt="Album Cover"
-                        width={56}
-                        height={56}
+                        width={128}
+                        height={72}
                     />
                 </div>
-                <div className="flex items-center pl-2 bg-gray-400">
+                <div className="flex items-center pl-6">
                     Song Title, Artist Name
                 </div>
-                <div className="flex items-center pl-2 bg-gray-500">
-                    Record Label
-                </div>
-                <div className="flex items-center justify-center bg-gray-600">
+                <div className="flex items-center pl-2 ">Record Label</div>
+                <div className="flex items-center justify-center ">
                     Controls
                 </div>
-                <div className="flex items-center justify-end pr-2 bg-gray-600">
+                <div className="flex items-center justify-center pr-2 ">
                     04:31
                 </div>
             </div>
