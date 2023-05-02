@@ -18,7 +18,9 @@ export default function TrackRowData(props: {
             <TrackRow
                 trackRowProps={{
                     track: track,
-                    number: index,
+                    number: (
+                        <div className="font-standard text-base">{index}</div>
+                    ),
                     image: (
                         <Image
                             src="https://via.placeholder.com/128x72.png"
@@ -28,15 +30,30 @@ export default function TrackRowData(props: {
                         />
                     ),
                     titleArtist: (
-                        <>
-                            <TrackTitle title={track.title} />
-                            <TrackVersion version={track.version} />
+                        <div className="flex flex-col font-standard">
+                            <div className="flex">
+                                <TrackTitle title={track.title} />
+                                {track.version && (
+                                    <>
+                                        &nbsp; &nbsp;
+                                        <TrackVersion version={track.version} />
+                                    </>
+                                )}
+                            </div>
                             <TrackArtist artist={track.artist} />
-                        </>
+                        </div>
                     ),
-                    label: <TrackLabel label={track.label} />,
+                    label: (
+                        <div className="font-standard">
+                            <TrackLabel label={track.label} />
+                        </div>
+                    ),
                     controls: "controols",
-                    duration: <TrackDuration duration={track.duration}>,
+                    duration: (
+                        <div className="font-standard text-base">
+                            {track.duration}
+                        </div>
+                    ),
                 }}
             />
         </div>
