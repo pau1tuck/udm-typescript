@@ -31,8 +31,12 @@ export default function Home() {
 
     return (
         <main className="flex min-h-screen flex-col">
-            <ViewModeButton />
+            <span className="text-white">
+                {" "}
+                <ViewModeButton />
+            </span>
             <TrackRowHeader />
+            {trackData}
             {/*<div className="flex flex-wrap justify-center">{trackData}</div>*/}
         </main>
     );

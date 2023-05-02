@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ITrackData } from "@/types/Track.interface";
-import { listColumns } from "@/components/ListView/TrackRowHeader";
+import TrackRow from "@/components/ListView/TrackRow";
 import TrackTitle from "@/components/TrackData/TrackTitle";
 import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
@@ -14,45 +14,31 @@ export default function TrackRowData(props: {
 }) {
     const { track, index } = props;
     return (
-        <div
-            className="grid gap-0 w-full bg-darkGray text-gray-500"
-            style={{ gridTemplateRows: "auto auto" }}
-        >
-            <div
-                className={`grid gap-0 w-full h-[72px] whitespace-nowrap ${listColumns}`}
-            >
-                <div className="flex items-center justify-center">{index}</div>
-                <div
-                    className="hidden lg:inline-flex items-center"
-                    style={{
-                        position: "relative",
-                        width: "128px",
-                        height: "72px",
-                    }}
-                >
-                    <Image
-                        src="https://via.placeholder.com/128x72.png"
-                        alt="Album Cover"
-                        width={128}
-                        height={72}
-                    />
-                </div>
-                <div className="flex flex-col items-start justify-center pl-6 truncate">
-                    <div className="text-white">
-                        <TrackTitle title={track.title} />
-                    </div>
-                    <div className="text-primary">{track.artist}</div>
-                </div>
-                <div className="hidden lg:inline-flex items-center pl-2 text-secondary">
-                    <TrackLabel label={track.label} />
-                </div>
-                <div className="flex items-center justify-center ">
-                    Controls
-                </div>
-                <div className="flex items-center justify-center pr-2 ">
-                    <TrackDuration duration={track.duration} />
-                </div>
-            </div>
+        <div className="w-full">
+            <TrackRow
+                trackRowProps={{
+                    track: track,
+                    number: index,
+                    image: (
+                        <Image
+                            src="https://via.placeholder.com/128x72.png"
+                            alt="Album Cover"
+                            width={128}
+                            height={72}
+                        />
+                    ),
+                    titleArtist: (
+                        <>
+                            <TrackTitle title={track.title} />
+                            <TrackVersion version={track.version} />
+                            <TrackArtist artist={track.artist} />
+                        </>
+                    ),
+                    label: <TrackLabel label={track.label} />,
+                    controls: "controols",
+                    duration: <TrackDuration duration={track.duration}>,
+                }}
+            />
         </div>
     );
 }

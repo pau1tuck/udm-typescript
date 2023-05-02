@@ -23,6 +23,10 @@ export interface ITrackData {
     month?: number;
     year?: number;
     duration?: string;
+    buyUrl?: string;
+    votes?: number;
+    createdAt?: string;
+    updatedAt?: string;
 }
 
 export interface ITracks {
