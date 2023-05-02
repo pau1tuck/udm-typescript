@@ -7,6 +7,7 @@ export interface ITrack {
     label: string;
     month: number;
     year: number;
+    duration: string;
     buyUrl?: string;
     votes: number;
     createdAt: string;
@@ -20,6 +21,8 @@ export interface ITrackData {
     version?: string;
     label?: string;
     month?: number;
+    year?: number;
+    duration?: string;
 }
 
 export interface ITracks {

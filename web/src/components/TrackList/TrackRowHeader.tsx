@@ -2,23 +2,8 @@ import React from "react";
 import { MdNumbers } from "react-icons/md";
 import { BiTime } from "react-icons/bi";
 
-const listColumns = {
-    /*
-    gridColumn1: "50px",
-    gridColumn2: "128px",
-    gridColumn3: "250",
-    gridColumn4: "1fr",
-    gridColumn5: "125px",
-    gridColumn6: "30px",
-    */
-    rowHeight: "72px",
-};
-
-export const listStyles = {
-    /*
-    gridTemplateColumns: `${listColumns.gridColumn1} ${listColumns.gridColumn2} ${listColumns.gridColumn3} ${listColumns.gridColumn4} ${listColumns.gridColumn5} ${listColumns.gridColumn6}`,*/
-    height: `${listColumns.rowHeight}`,
-};
+export const listColumns =
+    "grid-cols-[30px,5px,225px,5px,150px,5px] sm:grid-cols-[50px,5px,minmax(300px,1fr),5px,175px,5px] md:grid-cols-[50px,128px,minmax(300px,1fr),5px,200px,75px] lg:grid-cols-[50px,128px,1fr,225px,210px,75px]";
 
 export default function TrackRowHeader({
     children,
@@ -27,12 +12,11 @@ export default function TrackRowHeader({
         <div className="w-full">
             <div className="max-w-1280 mx-auto w-full">
                 <div
-                    className="grid gap-0 w-full bg-darkGray text-gray-500"
+                    className="grid gap-0 w-full font-body font-bold bg-darkGray text-gray-500"
                     style={{ gridTemplateRows: "auto auto" }}
                 >
                     <div
-                        className="grid gap-0 w-full grid-cols-[30px,5px,225px,5px,150px,5px] sm:grid-cols-[50px,5px,minmax(300px,1fr),5px,175px,5px] md:grid-cols-[50px,128px,minmax(300px,1fr),5px,200px,75px] lg:grid-cols-[50px,128px,1fr,225px,210px,75px] whitespace-nowrap"
-                        style={listStyles}
+                        className={`grid gap-0 w-full h-[72px] whitespace-nowrap ${listColumns}`}
                     >
                         <div className="flex items-center justify-center md:mr-3 md:ml-3 text-xl">
                             <MdNumbers />

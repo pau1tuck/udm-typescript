@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { ITrackData } from "@/types/Track.interface";
-import { listStyles } from "@/components/TrackList/TrackRowHeader";
+import { listColumns } from "@/components/TrackList/TrackRowHeader";
 import TrackTitle from "@/components/TrackData/TrackTitle";
 import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
 import TrackLabel from "@/components/TrackData/TrackLabel";
+import TrackDuration from "@/components/TrackData/TrackDuration";
 
 export default function TrackRowData(props: {
     track: ITrackData;
@@ -17,7 +18,9 @@ export default function TrackRowData(props: {
             className="grid gap-0 w-full bg-darkGray text-gray-500"
             style={{ gridTemplateRows: "auto auto" }}
         >
-            <div className="grid gap-0 w-full " style={listStyles}>
+            <div
+                className={`grid gap-0 w-full h-[72px] whitespace-nowrap ${listColumns}`}
+            >
                 <div className="flex items-center justify-center">{index}</div>
                 <div
                     className="hidden lg:inline-flex items-center"
@@ -47,7 +50,7 @@ export default function TrackRowData(props: {
                     Controls
                 </div>
                 <div className="flex items-center justify-center pr-2 ">
-                    04:31
+                    <TrackDuration duration={track.duration} />
                 </div>
             </div>
         </div>
