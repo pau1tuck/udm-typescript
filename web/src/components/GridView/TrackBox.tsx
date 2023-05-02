@@ -1,7 +1,7 @@
 import React from "react";
 import { ITrack } from "@/types/Track.interface";
-import TrackBoxImage from "@/components/TrackGrid/TrackBoxImage";
-import TrackBoxData from "@/components/TrackGrid/TrackBoxData";
+import TrackBoxImage from "@/components/GridView/TrackBoxImage";
+import TrackBoxData from "@/components/GridView/TrackBoxData";
 
 export default function TrackBox(props: { track: ITrack; index: number }) {
     const { track, index } = props;

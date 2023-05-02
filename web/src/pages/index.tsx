@@ -2,9 +2,9 @@ import { Inter } from "next/font/google";
 import { data } from "@/dummyData";
 import { ITrack } from "@/types/Track.interface";
 import ViewModeButton from "@/components/ViewModeButton";
-import TrackBox from "@/components/TrackGrid/TrackBox";
-import TrackRowHeader from "@/components/TrackList/TrackRowHeader";
-import TrackRowData from "@/components/TrackList/TrackRowData";
+import TrackBox from "@/components/GridView/TrackBox";
+import TrackRowHeader from "@/components/ListView/TrackRowHeader";
+import TrackRowData from "@/components/ListView/TrackRowData";
 
 const inter = Inter({ subsets: ["latin"] });
 

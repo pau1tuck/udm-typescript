@@ -18,20 +18,49 @@ export default function TrackRowHeader({
                     <div
                         className={`grid gap-0 w-full h-[72px] whitespace-nowrap ${listColumns}`}
                     >
-                        <div className="flex items-center justify-center md:mr-3 md:ml-3 text-xl">
+                        <div
+                            id="number"
+                            className="flex items-center justify-center md:mr-3 md:ml-3 text-xl"
+                        >
                             <MdNumbers />
                         </div>
-                        <div className="flex items-center"></div>
-                        <div className="flex items-center pl-2 sm:pl-2 md:pl-6 ">
+                        <div
+                            id="image"
+                            className="hidden sm:inline-flex items-center"
+                        >
+                            {children}
+                        </div>
+                        <div
+                            id="dummy-1"
+                            className="flex items-center sm:hidden"
+                        ></div>
+                        <div
+                            id="title-artist"
+                            className="flex items-center pl-2 sm:pl-2 md:pl-6 "
+                        >
                             Title, Artist
                         </div>
-                        <div className="inline-flex lg:hidden items-center"></div>
-                        <div className="hidden lg:inline-flex items-center pl-2">
+                        <div
+                            id="dummy-2"
+                            className="inline-flex lg:hidden items-center"
+                        ></div>
+                        <div
+                            id="label"
+                            className="hidden lg:inline-flex items-center pl-2"
+                        >
                             Label
                         </div>
-                        <div className="flex items-center">Controls</div>
-                        <div className="inline-flex md:hidden items-center"></div>
-                        <div className="hidden sm:hidden md:flex items-center justify-center text-xl">
+                        <div id="controls" className="flex items-center">
+                            Controls
+                        </div>
+                        <div
+                            id="dummy-3"
+                            className="inline-flex md:hidden items-center"
+                        ></div>
+                        <div
+                            id="duration"
+                            className="hidden sm:hidden md:flex items-center justify-center text-xl"
+                        >
                             <BiTime />
                         </div>
                     </div>
