@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ITrackData } from "@/types/Track.interface";
-import { listColumns } from "@/components/TrackList/TrackRowHeader";
+import { listColumns } from "@/components/ListView/TrackRowHeader";
 import TrackTitle from "@/components/TrackData/TrackTitle";
 import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
