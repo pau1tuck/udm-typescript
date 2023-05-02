@@ -19,60 +19,58 @@ export default function TrackRowHeader(props: {
         props.trackRowProps;
 
     return (
-        <div className="w-full">
-            <div className="max-w-1280 mx-auto w-full">
+        <div className="max-w-1280 mx-auto w-full">
+            <div
+                className="grid gap-0 w-full font-body font-bold bg-darkGray text-gray-500"
+                style={{ gridTemplateRows: "auto auto" }}
+            >
                 <div
-                    className="grid gap-0 w-full font-body font-bold bg-darkGray text-gray-500"
-                    style={{ gridTemplateRows: "auto auto" }}
+                    className={`grid gap-0 w-full h-[72px] whitespace-nowrap ${listColumns}`}
                 >
                     <div
-                        className={`grid gap-0 w-full h-[72px] whitespace-nowrap ${listColumns}`}
+                        id="number"
+                        className="inline-flex items-center justify-center md:mr-3 md:ml-3 text-xl"
                     >
-                        <div
-                            id="number"
-                            className="inline-flex items-center justify-center md:mr-3 md:ml-3 text-xl"
-                        >
-                            {number}
-                        </div>
-                        <div
-                            id="image"
-                            className="hidden sm:inline-flex items-center"
-                        >
-                            {image}
-                        </div>
-                        <div
-                            id="dummy-1"
-                            className="inline-flex sm:hidden items-center"
-                        ></div>
-                        <div
-                            id="title-artist"
-                            className="inline-flex items-center pl-2 sm:pl-2 md:pl-6 "
-                        >
-                            {titleArtist}
-                        </div>
-                        <div
-                            id="dummy-2"
-                            className="inline-flex lg:hidden items-center"
-                        ></div>
-                        <div
-                            id="label"
-                            className="hidden lg:inline-flex items-center pl-2"
-                        >
-                            {label}
-                        </div>
-                        <div id="controls" className="flex items-center">
-                            {controls}
-                        </div>
-                        <div
-                            id="dummy-3"
-                            className="inline-flex md:hidden items-center"
-                        ></div>
-                        <div
-                            id="duration"
-                            className="hidden sm:hidden md:inline-flex items-center justify-center text-xl"
-                        >
-                            {duration}
-                        </div>
+                        {number}
+                    </div>
+                    <div
+                        id="image"
+                        className="hidden sm:inline-flex items-center"
+                    >
+                        {image}
+                    </div>
+                    <div
+                        id="dummy-1"
+                        className="inline-flex sm:hidden items-center"
+                    ></div>
+                    <div
+                        id="title-artist"
+                        className="inline-flex items-center pl-2 sm:pl-2 md:pl-6 "
+                    >
+                        {titleArtist}
+                    </div>
+                    <div
+                        id="dummy-2"
+                        className="inline-flex lg:hidden items-center"
+                    ></div>
+                    <div
+                        id="label"
+                        className="hidden lg:inline-flex items-center pl-2"
+                    >
+                        {label}
+                    </div>
+                    <div id="controls" className="flex items-center">
+                        {controls}
+                    </div>
+                    <div
+                        id="dummy-3"
+                        className="inline-flex md:hidden items-center"
+                    ></div>
+                    <div
+                        id="duration"
+                        className="hidden sm:hidden md:inline-flex items-center justify-center text-xl"
+                    >
+                        {duration}
                     </div>
                 </div>
             </div>
