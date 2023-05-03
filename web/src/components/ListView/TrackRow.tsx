@@ -12,7 +12,7 @@ interface TrackRowProps {
 }
 
 const listColumns =
-    "grid-cols-[30px,5px,225px,5px,150px,5px] sm:grid-cols-[50px,5px,minmax(300px,1fr),5px,175px,5px] md:grid-cols-[50px,128px,minmax(300px,1fr),5px,200px,75px] lg:grid-cols-[50px,128px,1fr,225px,210px,75px]";
+    "grid-cols-[30px,5px,225px,5px,150px,5px] sm:grid-cols-[50px,5px,minmax(300px,1fr),5px,175px,5px] md:grid-cols-[70px,128px,minmax(300px,1fr),5px,200px,75px] lg:grid-cols-[50px,128px,1fr,225px,210px,75px]";
 
 export default function TrackRowHeader(props: {
     trackRowProps: TrackRowProps;
@@ -31,7 +31,7 @@ export default function TrackRowHeader(props: {
                 >
                     <div
                         id="number"
-                        className="inline-flex items-center justify-center md:mr-3 md:ml-3 text-xl"
+                        className="inline-flex items-center justify-center md:mr-3 text-xl"
                     >
                         {number}
                     </div>
@@ -47,7 +47,7 @@ export default function TrackRowHeader(props: {
                     ></div>
                     <div
                         id="title-artist"
-                        className="inline-flex items-center pl-2 sm:pl-2 md:pl-6 "
+                        className="inline-flex items-center sm:pl-2 md:pl-10 "
                     >
                         {titleArtist}
                     </div>
