@@ -4,14 +4,14 @@ import { createContext, useContext, useState } from "react";
 interface GlobalStateContextProps {
     nowPlaying: boolean;
     setNowPlaying: (value: boolean) => void;
-    trackId: string;
-    setTrackId: (value: string) => void;
+    trackId: string | null;
+    setTrackId: (value: string | null) => void;
 }
 
 const GlobalStateContext = createContext<GlobalStateContextProps>({
     nowPlaying: false,
     setNowPlaying: () => {},
-    trackId: "0",
+    trackId: null,
     setTrackId: () => {},
 });
 
@@ -23,9 +23,12 @@ export const GlobalStateProvider = ({
     children,
 }: React.PropsWithChildren<{}>) => {
     const [nowPlaying, setNowPlaying] = useState<boolean>(false);
+    const [trackId, setTrackId] = useState<string | null>(null);
 
     return (
-        <GlobalStateContext.Provider value={{ nowPlaying, setNowPlaying }}>
+        <GlobalStateContext.Provider
+            value={{ nowPlaying, setNowPlaying, trackId, setTrackId }}
+        >
             {children}
         </GlobalStateContext.Provider>
     );
