@@ -70,7 +70,7 @@ export default function TrackRowHeader(props: {
                     ></div>
                     <div
                         id="duration"
-                        className="hidden sm:hidden md:inline-flex items-center justify-center text-xl"
+                        className="hidden sm:hidden md:inline-flex items-center justify-center pr-6 text-xl"
                     >
                         {duration}
                     </div>

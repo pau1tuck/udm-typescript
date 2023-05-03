@@ -44,8 +44,8 @@ export default function TrackRowData(props: {
                     ),
                     controls: "controols",
                     duration: (
-                        <div className="font-standard text-base">
-                            {track.duration}
+                        <div className="font-standard text-base color-gray-600">
+                            <TrackDuration duration={track.duration} />
                         </div>
                     ),
                 }}
