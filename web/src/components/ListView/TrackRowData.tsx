@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ITrackData } from "@/types/Track.interface";
 import TrackRow from "@/components/ListView/TrackRow";
+import TrackRowImage from "@/components/ListView/TrackRowImage";
 import TrackTitle from "@/components/TrackData/TrackTitle";
 import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
@@ -21,14 +22,7 @@ export default function TrackRowData(props: {
                     number: (
                         <div className="font-standard text-base">{index}</div>
                     ),
-                    image: (
-                        <Image
-                            src="https://via.placeholder.com/128x72.png"
-                            alt="Album Cover"
-                            width={128}
-                            height={72}
-                        />
-                    ),
+                    image: <TrackRowImage trackId={track.trackId} />,
                     titleArtist: (
                         <div className="flex flex-col font-standard">
                             <div className="flex">
