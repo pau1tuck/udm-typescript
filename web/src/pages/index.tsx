@@ -31,10 +31,10 @@ export default function Home() {
 
     return (
         <main className="flex min-h-screen flex-col">
-            <span className="text-white">
+            <div className="flex justify-end text-white">
                 {" "}
                 <ViewModeButton />
-            </span>
+            </div>
             <TrackRowHeader />
             {trackData}
             {/*<div className="flex flex-wrap justify-center">{trackData}</div>*/}

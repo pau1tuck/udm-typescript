@@ -1,14 +1,19 @@
 import React from "react";
+import { ViewMode } from "@/types/ViewMode.enum";
 import { useViewMode, useViewModeContext } from "@/utils/ViewModeContext";
+import { FaList } from "react-icons/fa";
+import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 
 export default function ViewModeButton() {
     const viewMode = useViewMode();
     const toggleViewMode = useViewModeContext();
 
     return (
-        <div>
-            <button onClick={toggleViewMode}>Toggle View Mode</button>
-            <span>Current View Mode: {viewMode}</span>
+        <div
+            onClick={toggleViewMode}
+            className="pr-2 pb-4 cursor-pointer text-4xl text-gray-500 "
+        >
+            {viewMode == ViewMode.GRID ? <FaList /> : <TfiLayoutGrid2Alt />}
         </div>
     );
 }
