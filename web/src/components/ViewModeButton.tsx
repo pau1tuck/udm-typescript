@@ -11,7 +11,7 @@ export default function ViewModeButton() {
     return (
         <div
             onClick={toggleViewMode}
-            className="pr-2 pb-4 cursor-pointer text-4xl text-gray-500 "
+            className="cursor-pointer text-4xl text-gray-500 "
         >
             {viewMode == ViewMode.GRID ? <FaList /> : <TfiLayoutGrid2Alt />}
         </div>

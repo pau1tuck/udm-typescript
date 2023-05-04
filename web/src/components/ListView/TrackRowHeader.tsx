@@ -1,13 +1,13 @@
 import React from "react";
 import { MdNumbers } from "react-icons/md";
 import { BiTime } from "react-icons/bi";
-import TrackRow from "./TrackRow";
+import TrackRowData from "./TrackRowData";
 
 export default function TrackRowHeader() {
     return (
         <div className="w-full">
-            <TrackRow
-                trackRowProps={{
+            <TrackRowData
+                trackRowDataProps={{
                     number: <MdNumbers />,
                     image: null,
                     titleArtist: "Title / Artist",
