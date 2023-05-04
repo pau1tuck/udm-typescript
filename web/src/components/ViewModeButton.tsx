@@ -1,6 +1,6 @@
 import React from "react";
 import { ViewMode } from "@/types/ViewMode.enum";
-import { useViewMode, useViewModeContext } from "@/utils/ViewModeContext";
+import { useViewMode, useViewModeContext } from "@/utils/ViewModeProvider";
 import { FaList } from "react-icons/fa";
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 

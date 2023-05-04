@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import { data } from "@/dummyData";
 import { ITrack } from "@/types/Track.interface";
 import { ViewMode } from "@/types/ViewMode.enum";
-import { useViewMode, useViewModeContext } from "@/utils/ViewModeContext";
+import { useViewMode, useViewModeContext } from "@/utils/ViewModeProvider";
 import ViewModeButton from "@/components/ViewModeButton";
 import TrackBox from "@/components/GridView/TrackBox";
 import TrackRowHeader from "@/components/ListView/TrackRowHeader";
