@@ -28,13 +28,20 @@ export default function Home() {
 
     return (
         <main className="flex min-h-screen flex-col">
-            <div className="flex justify-end pr-4 pb-4 text-white">
-                <ViewModeButton />
-            </div>
             {viewMode == ViewMode.GRID ? (
-                <div className="flex flex-wrap justify-center">{trackData}</div>
+                <>
+                    <div className="flex justify-end lg:mr-20 pb-4 text-white">
+                        <ViewModeButton />
+                    </div>
+                    <div className="flex flex-wrap justify-center">
+                        {trackData}
+                    </div>
+                </>
             ) : (
                 <div className="pt-1">
+                    <div className="flex justify-end pr-1 pb-4 text-white">
+                        <ViewModeButton />
+                    </div>
                     <TrackRowHeader />
                     {trackData}
                 </div>

@@ -21,11 +21,11 @@ console.log("React version:", React.version);
 const server = process.env.NEXT_PUBLIC_SERVER;
 
 export default function App({ Component, pageProps }: AppProps) {
-    const [count, setCount] = useServerState(0, {
+    /* const [count, setCount] = useServerState(0, {
         key: "count",
         scope: "global",
         client,
-    });
+    }); */
     return (
         <GlobalStateProvider>
             <ViewModeProvider>
