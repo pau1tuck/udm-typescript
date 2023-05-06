@@ -1,6 +1,6 @@
 import React from "react";
-import { ITrackData } from "@/types/Track.interface";
+import { ITrackDataProps } from "@/types/Track.interface";
 
-export default function TrackVersion({ version }: ITrackData) {
+export default function TrackVersion({ version }: ITrackDataProps) {
     return <div className="text-tertiary">({version})</div>;
 }

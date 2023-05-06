@@ -1,8 +1,8 @@
-import { ITrack, ITrackData } from "@/types/Track.interface";
+import { ITrackDataProps } from "@/types/Track.interface";
 import React from "react";
 
 interface TrackRowDataProps {
-    track?: ITrackData;
+    track?: ITrackDataProps;
     number: React.ReactNode;
     image: React.ReactNode;
     titleArtist: React.ReactNode;

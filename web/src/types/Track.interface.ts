@@ -14,7 +14,7 @@ export interface ITrack {
     updatedAt: string;
 }
 
-export interface ITrackData {
+export interface ITrackDataProps {
     trackId?: string;
     artist?: string;
     title?: string;

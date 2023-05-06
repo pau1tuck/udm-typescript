@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { ITrackData } from "@/types/Track.interface";
+import { ITrackDataProps } from "@/types/Track.interface";
 import getServerSideProps from "@/utils/getServerSideProps";
 
-interface ITrackImageProps extends ITrackData {
+interface ITrackImageProps extends ITrackDataProps {
     width: number;
     height: number;
 }
 
-export default function TrackImage({ trackId, width, height }: ITrackImageProps) {
+export default function TrackImage({
+    trackId,
+    width,
+    height,
+}: ITrackImageProps) {
     const [imageUrl, setImageUrl] = useState<string | null>(null);
 
     useEffect(() => {
@@ -21,13 +25,23 @@ export default function TrackImage({ trackId, width, height }: ITrackImageProps)
             }
         }
 
-        fetchTrackImage().catch(error => {
-            console.error("An error occurred while fetching the track image:", error);
+        fetchTrackImage().catch((error) => {
+            console.error(
+                "An error occurred while fetching the track image:",
+                error
+            );
         });
     }, [trackId]);
 
     if (imageUrl) {
-        return <Image src={imageUrl} alt="Video thumbnail" width={width} height={height} />;
+        return (
+            <Image
+                src={imageUrl}
+                alt="Video thumbnail"
+                width={width}
+                height={height}
+            />
+        );
     } else {
         return null;
     }

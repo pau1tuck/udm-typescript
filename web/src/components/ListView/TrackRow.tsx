@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { ITrackData } from "@/types/Track.interface";
+import { ITrackDataProps } from "@/types/Track.interface";
 import TrackRowData from "@/components/ListView/TrackRowData";
 import TrackRowImage from "@/components/ListView/TrackRowImage";
 import TrackTitle from "@/components/TrackData/TrackTitle";
@@ -9,7 +9,10 @@ import TrackArtist from "@/components/TrackData/TrackArtist";
 import TrackLabel from "@/components/TrackData/TrackLabel";
 import TrackDuration from "@/components/TrackData/TrackDuration";
 
-export default function TrackRow(props: { track: ITrackData; index: number }) {
+export default function TrackRow(props: {
+    track: ITrackDataProps;
+    index: number;
+}) {
     const { track, index } = props;
     return (
         <div className="w-full">

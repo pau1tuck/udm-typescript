@@ -1,6 +1,6 @@
 import React from "react";
-import { ITrackData } from "@/types/Track.interface";
+import { ITrackDataProps } from "@/types/Track.interface";
 
-export default function TrackTitle({ title }: ITrackData) {
+export default function TrackTitle({ title }: ITrackDataProps) {
     return <div className="text-white">{title}</div>;
 }
