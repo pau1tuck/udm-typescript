@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { ITrackDataProps } from "@/types/Track.interface";
-import TrackRowData from "@/components/ListView/TrackRowData";
 import TrackRowImage from "@/components/ListView/TrackRowImage";
+import TrackRowData from "@/components/ListView/TrackRowData";
+import TrackRowControls from "@/components/ListView/TrackRowControls";
 import TrackTitle from "@/components/TrackData/TrackTitle";
 import TrackVersion from "@/components/TrackData/TrackVersion";
 import TrackArtist from "@/components/TrackData/TrackArtist";
@@ -42,7 +43,11 @@ export default function TrackRow(props: {
                             <TrackLabel label={track.label} />
                         </div>
                     ),
-                    controls: "controols",
+                    controls: (
+                        <div>
+                            <TrackRowControls />
+                        </div>
+                    ),
                     duration: (
                         <div className="font-standard text-base color-gray-600">
                             <TrackDuration duration={track.duration} />

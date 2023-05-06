@@ -1,9 +1,9 @@
-import { ITrackData } from "@/types/Track.interface";
+import { ITrackDataProps } from "@/types/Track.interface";
 import { IFavorites } from "@/types/Favorites.interface";
 
 export interface ITrackControlsProps {
-    trackId: ITrackData["trackId"];
-    buyUrl: ITrackData["buyUrl"];
-    upVotes: number;
-    favoriteTracks: IFavorites["favoriteTracks"];
+    trackId?: ITrackDataProps["trackId"];
+    upVotes?: number;
+    favoriteTracks?: IFavorites["favoriteTracks"];
+    buyUrl?: ITrackDataProps["buyUrl"];
 }

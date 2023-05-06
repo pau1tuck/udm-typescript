@@ -1,5 +1,6 @@
 import React from "react";
 import { ITrackControlsProps } from "@/types/TrackControls.interface";
+import BuyTrack from "@/components/TrackData/TrackControls/BuyTrack";
 
 const TrackControls: React.FC<ITrackControlsProps> = ({
     trackId,
@@ -7,7 +8,11 @@ const TrackControls: React.FC<ITrackControlsProps> = ({
     favoriteTracks,
     buyUrl,
 }) => {
-    return <></>;
+    return (
+        <>
+            <BuyTrack buyUrl={buyUrl} />
+        </>
+    );
 };
 
 export default TrackControls;
