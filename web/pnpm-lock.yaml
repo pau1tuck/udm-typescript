@@ -18,7 +18,7 @@ dependencies:
     version: 4.5.12
   '@state-less/react-client':
     specifier: github:state-less/react-client
-    version: github.com/state-less/react-client/ae2fc189f733425bd1165de40d558da7d8de6005(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0)
+    version: github.com/state-less/react-client/79dd0c56244b8650c4d895c69a8dc6020f905d7b(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0)
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.21)
@@ -69,6 +69,9 @@ devDependencies:
   eslint-plugin-react-hooks:
     specifier: ^4.6.0
     version: 4.6.0(eslint@8.38.0)
+  pnpm:
+    specifier: ^8.4.0
+    version: 8.4.0
   typescript:
     specifier: 5.0.4
     version: 5.0.4
@@ -4719,6 +4722,12 @@ packages:
       find-up: 4.1.0
     dev: false
 
+  /pnpm@8.4.0:
+    resolution: {integrity: sha512-oW5jpFgCmXHIVOU5HZLBWGBtCH7K4JSRdpk7/f+Dtp+KhUsX5NQaWzzYyU9TX7eAsfYMko179133gbUS+JTrMw==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: true
+
   /postcss-import@14.1.0(postcss@8.4.21):
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -5859,9 +5868,9 @@ packages:
     resolution: {integrity: sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==}
     dev: false
 
-  github.com/state-less/react-client/ae2fc189f733425bd1165de40d558da7d8de6005(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/state-less/react-client/tar.gz/ae2fc189f733425bd1165de40d558da7d8de6005}
-    id: github.com/state-less/react-client/ae2fc189f733425bd1165de40d558da7d8de6005
+  github.com/state-less/react-client/79dd0c56244b8650c4d895c69a8dc6020f905d7b(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {tarball: https://codeload.github.com/state-less/react-client/tar.gz/79dd0c56244b8650c4d895c69a8dc6020f905d7b}
+    id: github.com/state-less/react-client/79dd0c56244b8650c4d895c69a8dc6020f905d7b
     name: '@state-less/react-client'
     version: 2.0.1
     peerDependencies:
