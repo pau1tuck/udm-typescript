@@ -9,8 +9,11 @@ RUN apk add --no-cache curl \
     && curl -L https://unpkg.com/@pnpm/self-installer | node \
     && apk del curl
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Install the same version of pnpm that you have installed globally
+RUN npm install -g pnpm@8.4.0
+
+# Copy package.json and pnpm-lock.yaml to the working directory
+COPY package*.json pnpm-lock.yaml ./
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile
