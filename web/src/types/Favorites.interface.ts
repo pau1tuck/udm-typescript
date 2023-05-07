@@ -1,6 +1,6 @@
-import { ITrackData } from "@/types/Track.interface";
+import { ITrackDataProps } from "@/types/Track.interface";
 
 export interface IFavorites {
     userId?: string;
-    favoriteTracks?: ITrackData["trackId"][];
+    favoriteTracks?: ITrackDataProps["trackId"][];
 }

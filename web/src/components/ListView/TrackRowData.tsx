@@ -1,5 +1,6 @@
-import { ITrackDataProps } from "@/types/Track.interface";
 import React from "react";
+import { listColumns, style } from "@/components/ListView/TrackRow";
+import { ITrackDataProps } from "@/types/Track.interface";
 
 interface TrackRowDataProps {
     track?: ITrackDataProps;
@@ -10,11 +11,6 @@ interface TrackRowDataProps {
     controls: React.ReactNode;
     duration: React.ReactNode;
 }
-
-const listColumns =
-    "grid-cols-[30px,5px,225px,5px,150px,5px] sm:grid-cols-[50px,5px,minmax(300px,1fr),5px,175px,5px] md:grid-cols-[70px,128px,minmax(300px,1fr),5px,200px,75px] lg:grid-cols-[50px,128px,1fr,225px,210px,75px]";
-
-const style = { gridTemplateRows: "auto auto" };
 
 export default function TrackRowData(props: {
     trackRowDataProps: TrackRowDataProps;
@@ -49,7 +45,7 @@ export default function TrackRowData(props: {
                     ></div>
                     <div
                         id="title-artist"
-                        className="inline-flex items-center sm:pl-2 md:pl-10 "
+                        className="inline-flex items-center sm:pl-2 md:pl-10 text-white"
                     >
                         {titleArtist}
                     </div>
@@ -59,7 +55,7 @@ export default function TrackRowData(props: {
                     ></div>
                     <div
                         id="label"
-                        className="hidden lg:inline-flex items-center pl-2"
+                        className="hidden lg:inline-flex items-center pl-2 text-secondary"
                     >
                         {label}
                     </div>

@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Wrapper from "@/pages/_wrapper";
 import { data } from "@/dummyData";
 import { ITrack } from "@/types/Track.interface";
 import { ViewMode } from "@/types/ViewMode.enum";
@@ -11,41 +12,42 @@ import TrackRow from "@/components/ListView/TrackRow";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+    let nowPlaying = "dogshit.mp3";
     const viewMode = useViewMode();
     let trackData: JSX.Element[] | null = null;
 
     if (data) {
-        trackData = data.map((track: ITrack, key: number) => (
-            <>
-                {viewMode == ViewMode.GRID ? (
-                    <TrackBox track={track} index={key + 1} key={key} />
-                ) : (
-                    <TrackRow track={track} index={key + 1} key={key} />
-                )}
-            </>
-        ));
+        trackData = data.map((track: ITrack, key: number) => {
+            return viewMode == ViewMode.GRID ? (
+                <TrackBox track={track} index={key + 1} key={key} />
+            ) : (
+                <TrackRow track={track} index={key + 1} key={key} />
+            );
+        });
     }
 
     return (
-        <main className="flex min-h-screen flex-col">
-            {viewMode == ViewMode.GRID ? (
-                <>
-                    <div className="flex justify-end lg:mr-20 pb-4 text-white">
-                        <ViewModeButton />
-                    </div>
-                    <div className="flex flex-wrap justify-center">
+        <Wrapper audioSrc={nowPlaying}>
+            <main className="flex min-h-screen flex-col">
+                {viewMode == ViewMode.GRID ? (
+                    <>
+                        <div className="flex justify-end lg:mr-20 pr-1 pb-4 text-white">
+                            <ViewModeButton />
+                        </div>
+                        <div className="flex flex-wrap justify-center">
+                            {trackData}
+                        </div>
+                    </>
+                ) : (
+                    <div className="pt-1">
+                        <div className="flex justify-end pr-2 pb-4 text-white">
+                            <ViewModeButton />
+                        </div>
+                        <TrackRowHeader />
                         {trackData}
                     </div>
-                </>
-            ) : (
-                <div className="pt-1">
-                    <div className="flex justify-end pr-1 pb-4 text-white">
-                        <ViewModeButton />
-                    </div>
-                    <TrackRowHeader />
-                    {trackData}
-                </div>
-            )}
-        </main>
+                )}
+            </main>
+        </Wrapper>
     );
 }
