@@ -16,7 +16,7 @@ import Title from "@/components/Title";
 import Navbar from "@/components/NavBar/NavBar";
 import { ComponentPreviews, useInitial } from "@/components/dev";
 
-console.log("React version:", React.version);
+console.log("React version ass:", React.version);
 
 const server = process.env.NEXT_PUBLIC_SERVER;
 
