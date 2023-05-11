@@ -9,7 +9,7 @@ export default function TrackBoxData(props: { track: ITrackDataProps }) {
     const { track } = props;
     return (
         <div className="mt-3 font-cursive text-center text-white">
-            <div className="mt-2 rounded-md ">
+            <div className="mt-2 rounded-md">
                 <TrackTitle title={track.title} />
             </div>
             {track.version && (
@@ -20,9 +20,9 @@ export default function TrackBoxData(props: { track: ITrackDataProps }) {
             <div className="mt-2 rounded-md text-primary">
                 <TrackArtist artist={track.artist} />
             </div>
-            <span className="mt-2 rounded-md text-secondary">
+            <div className="mt-2 rounded-md text-secondary">
                 [<TrackLabel label={track.label} />]
-            </span>
+            </div>
         </div>
     );
 }
