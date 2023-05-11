@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 
 const useTypewriterEffect = (customText: string, trigger: unknown) => {
-    const [text, setText] = useState("");
-    const [index, setIndex] = useState(0);
+    const [text, setText] = useState<string>("");
+    const [index, setIndex] = useState<number>(0);
 
     useEffect(() => {
         setText(""); // Reset text

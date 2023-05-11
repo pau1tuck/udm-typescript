@@ -1,7 +1,6 @@
-import React from "react";
 import Image from "next/image";
 
-export default function Logo() {
+const Logo: React.FC = () => {
     return (
         <div className="flex items-center">
             <Image
@@ -13,4 +12,6 @@ export default function Logo() {
             />
         </div>
     );
-}
+};
+
+export default Logo;

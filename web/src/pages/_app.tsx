@@ -9,7 +9,7 @@ import { useServerState } from "@state-less/react-client";
 import client from "@/config/react-server-client";
 import type { AppProps } from "next/app";
 import { DevSupport } from "@react-buddy/ide-toolbox-next";
-import { GlobalStateProvider } from "@/config/global-state-context";
+import GlobalStateProvider from "@/utils/GlobalStateProvider";
 import ViewModeProvider from "@/utils/ViewModeProvider";
 import Logo from "@/components/Logo";
 import Title from "@/components/Title";

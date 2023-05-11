@@ -9,6 +9,7 @@ import ViewModeButton from "@/components/ViewModeButton";
 import TrackBox from "@/components/GridView/TrackBox";
 import TrackRowHeader from "@/components/ListView/TrackRowHeader";
 import TrackRow from "@/components/ListView/TrackRow";
+import "animate.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

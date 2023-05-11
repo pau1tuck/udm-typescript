@@ -1,6 +1,6 @@
 // src/components/MyComponent.tsx
 import React from "react";
-import { useGlobalState } from "@/config/global-state-context";
+import { useGlobalState } from "@/utils/GlobalStateProvider";
 
 const MyComponent: React.FC = () => {
     const { nowPlaying, setNowPlaying } = useGlobalState();
