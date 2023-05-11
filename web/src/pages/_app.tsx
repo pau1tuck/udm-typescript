@@ -16,9 +16,9 @@ import Title from "@/components/Title";
 import Navbar from "@/components/NavBar/NavBar";
 import { ComponentPreviews, useInitial } from "@/components/dev";
 
-console.log("React version ass:", React.version);
+console.log(React.version);
 
-const server = process.env.NEXT_PUBLIC_SERVER;
+// const server = process.env.NEXT_PUBLIC_SERVER;
 
 export default function App({ Component, pageProps }: AppProps) {
     /* const [count, setCount] = useServerState(0, {
@@ -42,6 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
                                 <Title />
                             </div>
                         </header>
+
                         <DevSupport
                             ComponentPreviews={ComponentPreviews}
                             useInitialHook={useInitial}

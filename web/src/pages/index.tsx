@@ -4,6 +4,7 @@ import { data } from "@/dummyData";
 import { ITrack } from "@/types/Track.interface";
 import { ViewMode } from "@/types/ViewMode.enum";
 import { useViewMode } from "@/utils/ViewModeProvider";
+import Slogan from "@/components/Slogan";
 import ViewModeButton from "@/components/ViewModeButton";
 import TrackBox from "@/components/GridView/TrackBox";
 import TrackRowHeader from "@/components/ListView/TrackRowHeader";
@@ -31,8 +32,15 @@ export default function Home() {
             <main className="flex min-h-screen flex-col">
                 {viewMode == ViewMode.GRID ? (
                     <>
-                        <div className="flex justify-end lg:mr-20 pr-1 pb-4 text-white">
-                            <ViewModeButton />
+                        <div className="flex justify-between">
+                            <div className="lg:ml-[85px] pt-3">
+                                <Slogan />
+                            </div>
+                            <div className="flex items-center">
+                                <div className="flex justify-end lg:mr-20 pr-1 pb-4 text-white">
+                                    <ViewModeButton />
+                                </div>
+                            </div>
                         </div>
                         <div className="flex flex-wrap justify-center">
                             {trackData}
@@ -40,8 +48,15 @@ export default function Home() {
                     </>
                 ) : (
                     <div className="pt-1">
-                        <div className="flex justify-end pr-2 pb-4 text-white">
-                            <ViewModeButton />
+                        <div className="flex justify-between">
+                            <div className="ml-3 pt-3">
+                                <Slogan />
+                            </div>
+                            <div className="flex items-center">
+                                <div className="flex justify-end mr-2 pb-4 text-white">
+                                    <ViewModeButton />
+                                </div>
+                            </div>
                         </div>
                         <TrackRowHeader />
                         {trackData}

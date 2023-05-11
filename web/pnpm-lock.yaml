@@ -18,7 +18,7 @@ dependencies:
     version: 4.5.12
   '@state-less/react-client':
     specifier: github:state-less/react-client
-    version: github.com/state-less/react-client/79dd0c56244b8650c4d895c69a8dc6020f905d7b(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0)
+    version: github.com/state-less/react-client/1a3e2f87f9c2c12fb155865ba95eead6ec9de6e3(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0)
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.21)
@@ -40,12 +40,12 @@ dependencies:
   react-icons:
     specifier: ^4.8.0
     version: 4.8.0(react@18.2.0)
+  react-typewriter-hook:
+    specifier: ^1.0.1
+    version: 1.0.1
   tailwindcss:
     specifier: 3.3.1
     version: 3.3.1(postcss@8.4.21)
-  typewriter-effect:
-    specifier: ^2.19.0
-    version: 2.19.0(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@react-buddy/ide-toolbox-next':
@@ -4691,10 +4691,6 @@ packages:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
 
-  /performance-now@2.1.0:
-    resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
-    dev: false
-
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -4882,12 +4878,6 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /raf@3.4.1:
-    resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
-    dependencies:
-      performance-now: 2.1.0
-    dev: false
-
   /range-parser@1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
@@ -4935,6 +4925,10 @@ packages:
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: false
+
+  /react-typewriter-hook@1.0.1:
+    resolution: {integrity: sha512-XOBBkI1fuZRH5OBpJ9qZuXxMZ1T8EgU2VsbKwR+2mvA5rMVjMtbTg2iRNFxpiYY3ClNQ5fBegAaCqRLsNNsvfg==}
     dev: false
 
   /react@18.2.0:
@@ -5569,18 +5563,6 @@ packages:
     engines: {node: '>=12.20'}
     hasBin: true
 
-  /typewriter-effect@2.19.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-rhUX1ukmAXNFWUnMFx8CDU1uLWJQ7pRYzDU7WfHJRq43i6SmWSP9vFiUsOGfXINodUAgZiJ5xnzwLciHxZDGDg==}
-    peerDependencies:
-      react: ^17.x || ^18.x
-      react-dom: ^17.x || ^18.x
-    dependencies:
-      prop-types: 15.8.1
-      raf: 3.4.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
     dependencies:
@@ -5859,11 +5841,11 @@ packages:
     resolution: {integrity: sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==}
     dev: false
 
-  github.com/state-less/react-client/79dd0c56244b8650c4d895c69a8dc6020f905d7b(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {tarball: https://codeload.github.com/state-less/react-client/tar.gz/79dd0c56244b8650c4d895c69a8dc6020f905d7b}
-    id: github.com/state-less/react-client/79dd0c56244b8650c4d895c69a8dc6020f905d7b
+  github.com/state-less/react-client/1a3e2f87f9c2c12fb155865ba95eead6ec9de6e3(@babel/core@7.21.8)(@types/node@18.15.11)(eslint@8.38.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {tarball: https://codeload.github.com/state-less/react-client/tar.gz/1a3e2f87f9c2c12fb155865ba95eead6ec9de6e3}
+    id: github.com/state-less/react-client/1a3e2f87f9c2c12fb155865ba95eead6ec9de6e3
     name: '@state-less/react-client'
-    version: 2.0.1
+    version: 2.0.2
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
