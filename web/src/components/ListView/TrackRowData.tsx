@@ -45,7 +45,7 @@ export default function TrackRowData(props: {
                     ></div>
                     <div
                         id="title-artist"
-                        className="inline-flex items-center sm:pl-2 md:pl-10 text-white"
+                        className="inline-flex items-center sm:pl-2 md:pl-10"
                     >
                         {titleArtist}
                     </div>
@@ -55,7 +55,7 @@ export default function TrackRowData(props: {
                     ></div>
                     <div
                         id="label"
-                        className="hidden lg:inline-flex items-center pl-2 text-secondary"
+                        className="hidden lg:inline-flex items-center pl-2 text-pink-700"
                     >
                         {label}
                     </div>

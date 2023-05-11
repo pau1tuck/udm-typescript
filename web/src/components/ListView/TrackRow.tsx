@@ -39,7 +39,9 @@ export default function TrackRow(props: {
                                     </>
                                 )}
                             </div>
-                            <TrackArtist artist={track.artist} />
+                            <div className="text-secondary">
+                                <TrackArtist artist={track.artist} />
+                            </div>
                         </div>
                     ),
                     label: (

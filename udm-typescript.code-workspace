@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../udm-server"
+		},
+		{
+			"path": "../archive/udm_ts/udm-server"
 		}
 	],
 	"settings": {}

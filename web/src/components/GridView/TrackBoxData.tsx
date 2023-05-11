@@ -17,11 +17,11 @@ export default function TrackBoxData(props: { track: ITrackDataProps }) {
                     <TrackVersion version={track.version} />
                 </div>
             )}
-            <div className="mt-2 rounded-md text-primary">
+            <div className="mt-2 rounded-md text-secondary">
                 <TrackArtist artist={track.artist} />
             </div>
-            <div className="mt-2 rounded-md text-secondary">
-                [<TrackLabel label={track.label} />]
+            <div className="mt-2 rounded-md text-pink-700">
+                <TrackLabel label={track.label} />
             </div>
         </div>
     );
