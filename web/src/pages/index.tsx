@@ -32,11 +32,11 @@ export default function Home() {
             <main className="flex min-h-screen flex-col">
                 {viewMode == ViewMode.GRID ? (
                     <>
-                        <div className="flex sm:justify-between justify-end items-center lg:px-20 sm:px-4 px-1 pt-3 pb-4">
+                        <div className="flex sm:justify-between justify-end items-center lg:ml-[70px] sm:px-4 px-1 pt-3 pb-4">
                             <div className="sm:block hidden mr-auto">
                                 <Slogan />
                             </div>
-                            <div className="text-white">
+                            <div className="lg:mr-[65px] text-white">
                                 <ViewModeButton />
                             </div>
                         </div>
