@@ -11,7 +11,7 @@ module.exports = {
             fontFamily: {
                 display: ["Quicksand", "ui-sans-serif", "Georgia"],
                 body: ["Montserrat", "ui-sans-serif", "Georgia"],
-                standard: ["Lato", "sans-serif"],
+                standard: ["Inter", "sans-serif"],
                 cursive: ["Architects Daughter", "cursive", "ui-sans-serif"],
             },
             colors: {
