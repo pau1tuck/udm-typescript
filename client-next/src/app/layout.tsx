@@ -23,7 +23,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className="min-h-screen bg-custom">
+                <div className="min-h-screen bg-custom font-standard">
                     <div>
                         <NavBar />
                     </div>

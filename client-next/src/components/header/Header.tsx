@@ -1,5 +1,3 @@
-// @/components/header/Header.tsx
-
 import Logo from "@/components/header/Logo";
 import Title from "@/components/header/Title";
 
