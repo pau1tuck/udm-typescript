@@ -19,9 +19,10 @@
 
 .bg-custom {
     background-image: url("/img/background.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 body {
