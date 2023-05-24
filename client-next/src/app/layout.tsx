@@ -24,16 +24,16 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <div className="min-h-screen bg-custom font-standard">
-                    <div>
+                    <nav>
                         <NavBar />
-                    </div>
+                    </nav>
                     <div className="max-w-screen-xl mx-auto px-4">
                         <header className="">
                             <Header />
                         </header>
                         <main className="">{children}</main>
-                        <footer className=""></footer>d
                     </div>
+                    <footer className=""></footer>d
                 </div>
             </body>
         </html>
