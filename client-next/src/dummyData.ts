@@ -93,7 +93,7 @@ export const data = [
         id: "7",
         trackId: "WtbRVe9qDUE",
         title: "Demucha",
-        version: "(Dam Swindle Remix)",
+        version: "Dam Swindle Remix",
         artist: "Crackazat",
         label: "Heist Recordings",
         month: 1,

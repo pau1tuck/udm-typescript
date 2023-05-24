@@ -1,4 +1,3 @@
-import { data } from "@/dummyData";
 import { TrackBox } from "./TrackBox";
 import { getTrackData } from "@/utils/get-track-data";
 

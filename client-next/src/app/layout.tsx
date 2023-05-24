@@ -1,6 +1,12 @@
 import React from "react";
+import "@fontsource/quicksand/400.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/500.css";
+import "@fontsource/lato/400.css";
+import "@fontsource/architects-daughter/400.css";
 import "./globals.css";
 import { Inter } from "next/font/google";
+
 import { Header } from "@/components/header/Header";
 import { NavBar } from "@/components/navbar/NavBar";
 
