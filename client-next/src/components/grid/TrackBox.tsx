@@ -1,11 +1,5 @@
-import { ITrack } from "@/types/track.types";
+import { ITrackProps } from "@/types/track.types";
 
-export const TrackBox = ({
-    track,
-    index,
-}: {
-    track: ITrack;
-    index: number;
-}) => {
+export const TrackBox = ({ track }: ITrackProps) => {
     return <div></div>;
 };

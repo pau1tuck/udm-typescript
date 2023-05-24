@@ -14,6 +14,10 @@ export interface ITrack {
     updatedAt: string;
 }
 
-export interface ITracks {
-    payload: ITrack[];
-}
+export type ITrackProps = {
+    track: ITrack;
+};
+
+export type ITracks = {
+    tracks: ITrack[];
+};
