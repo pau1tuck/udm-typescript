@@ -31,20 +31,20 @@ export default function RootLayout({
         <GlobalStateProvider>
             <html lang="en">
                 <body className={inter.className}>
-                    <div className="min-h-screen bg-custom font-standard">
-                        <nav>
-                            <NavBar />
-                        </nav>
-                        <div className="max-w-screen-xl mx-auto px-4">
-                            <header className="">
-                                <Header />
-                            </header>
-                            <AudioWrapper audioSrc="">
+                    <AudioWrapper>
+                        <div className="min-h-screen bg-custom font-standard">
+                            <nav>
+                                <NavBar />
+                            </nav>
+                            <div className="max-w-screen-xl mx-auto px-4">
+                                <header className="">
+                                    <Header />
+                                </header>
+
                                 <main className="">{children}</main>
-                            </AudioWrapper>
+                            </div>
                         </div>
-                        <footer className=""></footer>d
-                    </div>
+                    </AudioWrapper>
                 </body>
             </html>
         </GlobalStateProvider>
