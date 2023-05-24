@@ -1,6 +1,6 @@
 export const NavBar: React.FC = () => {
     return (
-        <div className="flex justify-end p-4 font-standard text-lg">
+        <div className="flex justify-end mr-4 p-4 font-standard text-md">
             <button className="inline-block mr-2 px-4 py-2 text-gray-200 hover:text-white">
                 Log In
             </button>
