@@ -18,7 +18,7 @@ module.exports = {
                 primary: "#FD024B", // pink
                 secondary: "#0C86F8", // cyan
                 tertiary: "#fff056", // yellow
-                darkGray: "rgba(10, 10, 10, 0.7)",
+                customGray: "rgba(10, 10, 10, 0.7)",
             },
             keyframes: {
                 flashing: {

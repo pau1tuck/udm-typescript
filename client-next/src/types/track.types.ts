@@ -21,3 +21,18 @@ export type ITrackProps = {
 export type ITracks = {
     tracks: ITrack[];
 };
+
+export interface ITrackDataProps {
+    trackId?: string;
+    artist?: string;
+    title?: string;
+    version?: string;
+    label?: string;
+    month?: number;
+    year?: number;
+    duration?: string;
+    buyUrl?: string;
+    votes?: number;
+    createdAt?: string;
+    updatedAt?: string;
+}
