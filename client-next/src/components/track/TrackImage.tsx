@@ -1,9 +1,10 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getServerSideProps } from "@/utils/get-track-image";
 
 interface ITrackImageProps {
-    trackId: string | undefined;
+    trackId?: string;
     width: number;
     height: number;
 }

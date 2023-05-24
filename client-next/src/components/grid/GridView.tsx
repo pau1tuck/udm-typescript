@@ -1,14 +1,10 @@
-import { getTrackData } from "@/utils/get-track-data";
+import { data } from "@/dummyData";
 import { TrackBox } from "./TrackBox";
 
-export const GridView = (filter: string, sortBy: string) => {
-    const tracks = getTrackData(filter, sortBy);
+export const GridView = () => {
+    const tracks = data;
     const trackBox = tracks.map((track, index) => {
-        return (
-            <div key={index}>
-                <TrackBox track={track} />
-            </div>
-        );
+        return <TrackBox track={track} key={index} />;
     });
     return <div className="">{trackBox}</div>;
 };

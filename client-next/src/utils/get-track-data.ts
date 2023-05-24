@@ -1,6 +1,6 @@
 import { data } from "@/dummyData";
 
-export const getTrackData = (filter: string, sortBy: string) => {
+export const getTrackData = () => {
     return data;
 };
 
