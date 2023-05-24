@@ -1,8 +1,8 @@
 import React from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Header from "@/components/header/Header";
-import NavBar from "@/components/navbar/NavBar";
+import { Header } from "@/components/header/Header";
+import { NavBar } from "@/components/navbar/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 const title = process.env.NEXT_PUBLIC_SITE_TITLE;

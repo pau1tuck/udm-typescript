@@ -1,7 +1,7 @@
-import Logo from "@/components/header/Logo";
-import Title from "@/components/header/Title";
+import { Logo } from "@/components/header/Logo";
+import { Title } from "@/components/header/Title";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
     return (
         <div className="flex flex-col justify-center items-center mt-[-20px] md:mt-[-65px] mb-10 pr-3">
             <Logo />
@@ -9,5 +9,3 @@ const Header: React.FC = () => {
         </div>
     );
 };
-
-export default Header;

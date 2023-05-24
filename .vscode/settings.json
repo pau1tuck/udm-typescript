@@ -1,1 +1,5 @@
-{"editor.quickSuggestions": "off"}
+{
+    "editor.quickSuggestions": {
+        "other": "on"
+    }
+}

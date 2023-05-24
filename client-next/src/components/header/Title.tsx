@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Title: React.FC = () => {
+export const Title: React.FC = () => {
     return (
         <div className="flex items-center pl-3">
             <div className="inline-block relative animate-flashing">
@@ -15,5 +15,3 @@ const Title: React.FC = () => {
         </div>
     );
 };
-
-export default Title;
