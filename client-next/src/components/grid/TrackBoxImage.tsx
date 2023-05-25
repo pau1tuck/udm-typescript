@@ -13,14 +13,15 @@ export const TrackBoxImage = ({ trackId }: ITrackDataProps) => {
 
     const handleImageClick = () => {
         if (trackId) {
-            if (!nowPlaying) {
-                setTrackId(trackId);
-                setNowPlaying(true);
-            }
-            if (trackId === id) {
-                setNowPlaying(false);
+            if (nowPlaying) {
+                if (trackId === id) {
+                    setNowPlaying(false);
+                } else {
+                    setTrackId(trackId);
+                }
             } else {
                 setTrackId(trackId);
+                setNowPlaying(true);
             }
         }
         console.log("Image: ", trackId, nowPlaying, "Playing: ", id);

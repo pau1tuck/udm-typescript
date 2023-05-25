@@ -36,3 +36,13 @@ export interface ITrackDataProps {
     createdAt?: string;
     updatedAt?: string;
 }
+
+export interface ITrackRowDataProps {
+    track?: ITrackDataProps;
+    number: React.ReactNode;
+    image: React.ReactNode;
+    titleArtist: React.ReactNode;
+    label: React.ReactNode;
+    controls: React.ReactNode;
+    duration: React.ReactNode;
+}
