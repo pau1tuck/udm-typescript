@@ -12,12 +12,18 @@ export const TrackBoxImage = ({ trackId }: ITrackDataProps) => {
     } = useGlobalState();
 
     const handleImageClick = () => {
-        if (trackId && trackId == id) {
-            setNowPlaying(false);
-        } else if (trackId) {
-            setNowPlaying(true);
-            setTrackId(trackId);
+        if (trackId) {
+            if (!nowPlaying) {
+                setTrackId(trackId);
+                setNowPlaying(true);
+            }
+            if (trackId === id) {
+                setNowPlaying(false);
+            } else {
+                setTrackId(trackId);
+            }
         }
+        console.log("Image: ", trackId, nowPlaying, "Playing: ", id);
     };
 
     return (

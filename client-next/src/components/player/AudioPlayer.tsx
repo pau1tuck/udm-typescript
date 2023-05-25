@@ -1,3 +1,4 @@
+import { useGlobalState } from "@/config/global-state";
 import { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 
@@ -7,6 +8,7 @@ interface IAudioPlayerProps {
 }
 
 export const AudioPlayer = (props: IAudioPlayerProps) => {
+    const { trackId } = useGlobalState();
     const [isClient, setIsClient] = useState(false);
     const playerRef = useRef<ReactPlayer | null>(null);
 
@@ -25,7 +27,7 @@ export const AudioPlayer = (props: IAudioPlayerProps) => {
         <div style={{ width: "100%", height: "55px" }}>
             <ReactPlayer
                 ref={playerRef}
-                url="/media/WtbRVe9qDUE.mp3"
+                url={`/media/${trackId}.mp3`}
                 controls={true}
                 width="100%"
                 height="100%"
