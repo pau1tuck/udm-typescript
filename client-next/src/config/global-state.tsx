@@ -8,15 +8,21 @@ interface GlobalStateContextProps {
     setTrackId: (value: string) => void;
 }
 
-export const GlobalStateContext = createContext<GlobalStateContextProps>({
+const GlobalStateContext = createContext<GlobalStateContextProps>({
     nowPlaying: false,
     setNowPlaying: () => {},
     trackId: "",
     setTrackId: () => {},
 });
 
+const GlobalStateUpdateContext = createContext<() => void>(() => {});
+
 export const useGlobalState = () => {
     return useContext(GlobalStateContext);
+};
+
+export const useGlobalStateContext = () => {
+    return useContext(GlobalStateUpdateContext);
 };
 
 export const GlobalStateProvider = ({

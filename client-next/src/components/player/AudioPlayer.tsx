@@ -22,10 +22,10 @@ export const AudioPlayer = (props: IAudioPlayerProps) => {
     }, [props.nowPlaying]);
 
     return isClient ? (
-        <div style={{ width: "100%", height: "1px" }}>
+        <div style={{ width: "100%", height: "55px" }}>
             <ReactPlayer
                 ref={playerRef}
-                url={`/media/${props.trackId}`}
+                url="/media/WtbRVe9qDUE.mp3"
                 controls={true}
                 width="100%"
                 height="100%"
