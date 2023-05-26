@@ -58,8 +58,10 @@ const TrackRowLg = (index: number, track: ITrackDataProps) => {
                     >
                         {track.label}
                     </div>
-                    //? Continue here
-                    <div className="font-standard text-base color-gray-600">
+                    <div id="controls" className="flex items-center">
+                        "CONTROLS"
+                    </div>
+                    <div className="inline-flex items-center justify-center pr-6 text-base color-gray-600">
                         <TrackDuration duration={track.duration} />
                     </div>
                 </div>
